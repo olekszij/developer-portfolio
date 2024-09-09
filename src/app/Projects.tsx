@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { BiLinkExternal } from 'react-icons/bi';
 
 const projects = [
-    { name: "Vinted replica", description: "frontend/backend", image: "/images/project1.jpg", link: "https://vintversion.netlify.app/offers/66cf3934b4d2bb07a6978b2f" },
+    { name: "Vinted replica", description: "frontend/backend", image: "/images/project1.jpg", link: "https://vintversion.netlify.app/" },
     { name: "Project 2", description: "Description of project 2", image: "/images/project2.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
     { name: "Project 3", description: "Description of project 3", image: "/images/project3.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
     { name: "Project 4", description: "Description of project 4", image: "/images/project4.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
