@@ -1,8 +1,7 @@
 'use client';
 
 import { FaNodeJs, FaReact, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiVercel, SiExpress, SiVisualstudiocode, SiTypescript, SiNetlify } from 'react-icons/si';
-import { useState } from 'react';
+import { SiTailwindcss, SiMongodb, SiVercel, SiExpress, SiTypescript, SiNetlify } from 'react-icons/si';
 
 const TechnologiesList = () => {
     const technologies = [
