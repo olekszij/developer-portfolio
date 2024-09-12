@@ -7,7 +7,7 @@ import { BiLinkExternal } from 'react-icons/bi';
 const projects = [
     { name: "Vinted replica", description: "frontend/backend", image: "/images/project1.jpg", link: "https://vintversion.netlify.app/" },
     { name: "Project 2", description: "Description of project 2", image: "/images/project2.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
-    { name: "Project 3", description: "Description of project 3", image: "/images/project3.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
+    { name: "Deliveroo replica", description: "Frontend React", image: "/images/project3.jpg", link: "https://dreplica.netlify.app" },
     { name: "Project 4", description: "Description of project 4", image: "/images/project4.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
     { name: "Project 5", description: "Description of project 5", image: "/images/project5.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
     { name: "Project 6", description: "Description of project 6", image: "/images/project6.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
@@ -28,7 +28,7 @@ export default function Projects() {
                             alt={project.name}
                             width={500}
                             height={300}
-                            className="object-cover w-full h-full"
+                            className="object-fit w-full h-full"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center">
                             <div className="flex items-center justify-center">
