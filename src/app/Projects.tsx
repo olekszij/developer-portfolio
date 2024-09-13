@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { BiLinkExternal } from 'react-icons/bi';
 
 const projects = [
+    { name: "Deliveroo replica", description: "Frontend React/Backend Express", image: "/images/project3.jpg", link: "https://dreplica.netlify.app" },
     { name: "Vinted replica", description: "frontend/backend", image: "/images/project1.jpg", link: "https://vintversion.netlify.app/" },
     { name: "Marvel Comics Database", description: "Frontend React", image: "/images/project2.jpg", link: "https://jenemarrrrvel.netlify.app/" },
-    { name: "Deliveroo replica", description: "Frontend React", image: "/images/project3.jpg", link: "https://dreplica.netlify.app" },
+
     { name: "Project 4", description: "Description of project 4", image: "/images/project4.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
     { name: "Project 5", description: "Description of project 5", image: "/images/project5.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
     { name: "Project 6", description: "Description of project 6", image: "/images/project6.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },

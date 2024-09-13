@@ -17,9 +17,7 @@ const Home = () => (
       <section id="projects" className="py-12 animate-fadeIn">
         <Projects />
       </section>
-      <section id="proddjects" className="py-12 animate-fadeIn">
-        <Projects />
-      </section>
+
     </main>
   </div>
 );
