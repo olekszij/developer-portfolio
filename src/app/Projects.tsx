@@ -8,16 +8,15 @@ const projects = [
     { name: "Deliveroo replica", description: "Frontend React/Backend Express", image: "/images/project3.jpg", link: "https://dreplica.netlify.app" },
     { name: "Vinted replica", description: "frontend/backend", image: "/images/project1.jpg", link: "https://vintversion.netlify.app/" },
     { name: "Marvel Comics Database", description: "Frontend React", image: "/images/project2.jpg", link: "https://jenemarrrrvel.netlify.app/" },
-
     { name: "Car Rental Reservation Application", description: "Frontend React/Backend Express", image: "/images/project4.jpg", link: "https://rentauto.netlify.app" },
     { name: "Burger King replica", description: "Frontend/backend ask me for details", image: "/images/project5.jpg", link: "#" },
-    { name: "Project 6", description: "Description of project 6", image: "/images/project6.jpg", link: "https://github.com/olegkondratenko/nextjs-portfolio" },
+    { name: "📝 English Level Test App", description: "The app automatically evaluates the score based on the CEFR scale", image: "/images/project6.jpg", link: "https://cefr.netlify.app" },
 ];
 
 export default function Projects() {
     return (
         <section className="py-16 text-gray-900 rounded-2xl shadow-xl pb-24">
-            <h2 className="text-center text-5xl font-extrabol  mb-12">Projects</h2>
+            <h2 className="text-center text-5xl font-extrabol mb-12">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4 md:px-8">
                 {projects.map((project, index) => (
                     <div
@@ -32,12 +31,19 @@ export default function Projects() {
                             className="object-fit w-full h-full"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center">
-                            <div className="flex items-center justify-center">
-                                <BiLinkExternal className="mr-2" />
-                                <Link href={project.link} target="_blank" className="text-white">
-                                    {project.name}
-                                </Link>
-                            </div>
+                            {project.link !== "#" ? (
+                                <div className="flex items-center justify-center">
+                                    <BiLinkExternal className="mr-2" />
+                                    <Link href={project.link} target="_blank" className="text-white">
+                                        {project.name}
+                                    </Link>
+                                </div>
+                            ) : (
+                                <div className="flex items-center justify-center">
+                                    <BiLinkExternal className="mr-2" />
+                                    <span className="text-white">{project.name}</span>
+                                </div>
+                            )}
                             <p className="mt-2 text-gray-300">{project.description}</p>
                         </div>
                     </div>
