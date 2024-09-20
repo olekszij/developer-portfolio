@@ -10,7 +10,7 @@ const projects = [
     { name: "Marvel Comics Database", description: "Frontend React", image: "/images/project2.jpg", link: "https://jenemarrrrvel.netlify.app/" },
     { name: "Car Rental Reservation Application", description: "Frontend React/Backend Express", image: "/images/project4.jpg", link: "https://rentauto.netlify.app" },
     { name: "Burger King replica", description: "Frontend/backend ask me for details", image: "/images/project5.jpg", link: "#" },
-    { name: "📝 English Level Test App", description: "The app automatically evaluates the score based on the CEFR scale", image: "/images/project6.jpg", link: "https://cefr.netlify.app" },
+    { name: "English Level Test App", description: "The app automatically evaluates the score based on the CEFR scale", image: "/image/project6.jpg", link: "https://cefr.netlify.app" },
 ];
 
 export default function Projects() {
