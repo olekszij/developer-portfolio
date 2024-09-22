@@ -5,17 +5,25 @@ import Link from 'next/link';
 import { BiLinkExternal } from 'react-icons/bi';
 
 const projects = [
-    { name: "Deliveroo replica", description: "Frontend React/Backend Express", image: "/images/project3.jpg", link: "https://dreplica.netlify.app" },
-    { name: "Vinted replica", description: "frontend/backend", image: "/images/project1.jpg", link: "https://vintversion.netlify.app/" },
+    {
+        name: "CocktailFinder",
+        description: "Next.js/TypeScript",
+        image: "/images/project7.jpg",
+        link: "https://cool-cocktail-app.netlify.app/"
+    },
+    { name: "Deliveroo replica", description: "React/Express", image: "/images/project3.jpg", link: "https://dreplica.netlify.app" },
+
     { name: "Marvel Comics Database", description: "Frontend React", image: "/images/project2.jpg", link: "https://jenemarrrrvel.netlify.app/" },
-    { name: "Car Rental Reservation Application", description: "Frontend React/Backend Express", image: "/images/project4.jpg", link: "https://rentauto.netlify.app" },
-    { name: "Burger King replica", description: "Frontend/backend ask me for details", image: "/images/project5.jpg", link: "#" },
+    { name: "Car Rental Reservation Application", description: "React/Express", image: "/images/project4.jpg", link: "https://rentauto.netlify.app" },
+    { name: "Burger King replica", description: "Ask me for details", image: "/images/project5.jpg", link: "#" },
     {
         name: "English Level Test App",
-        description: "Get the score based on the CEFR scale",
+        description: "Next.js/TypeScript",
         image: "/images/project6.jpg",
         link: "https://cefr.netlify.app"
-    }
+    },
+    { name: "Vinted replica", description: "frontend/backend", image: "/images/project1.jpg", link: "https://vintversion.netlify.app/" },
+
 
 ];
 
