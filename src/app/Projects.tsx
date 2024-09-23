@@ -17,6 +17,12 @@ const projects = [
     { name: "Car Rental Reservation Application", description: "React/Express", image: "/images/project4.jpg", link: "https://rentauto.netlify.app" },
     { name: "Burger King replica", description: "Ask me for details", image: "/images/project5.jpg", link: "#" },
     {
+        name: "Guess the Movie",
+        description: "Next.js/TypeScript",
+        image: "/images/project8.jpg",
+        link: "https://tmdb-quiz.vercel.app/"
+    },
+    {
         name: "English Level Test App",
         description: "Next.js/TypeScript",
         image: "/images/project6.jpg",
