@@ -39,9 +39,20 @@ const AboutMe = () => {
 
                 {/* Description Text */}
                 <div className="mt-20 max-w-3xl mx-auto text-center pb-12">
-                    <p className="text-xl leading-relaxed text-gray-800">
-                        I am a passionate self-taught web developer with a strong focus on building efficient, high-performance applications using modern web technologies.
-                    </p>
+                    <div className="space-y-8">
+                        <div>
+                            <h3 className="text-2xl font-semibold text-gray-900 mb-4">About My Work</h3>
+                            <p className="text-xl leading-relaxed text-gray-800">
+                                I&apos;m a web developer passionate about technology and creating great digital experiences. Specializing in modern web technologies, I build efficient and performant applications that users enjoy working with.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-semibold text-gray-900 mb-4">My Approach</h3>
+                            <p className="text-xl leading-relaxed text-gray-800">
+                                My development journey is all about continuous learning and keeping up with the latest industry trends. I believe in building solutions that are both technically sound and user-friendly.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
