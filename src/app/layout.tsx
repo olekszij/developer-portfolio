@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -22,9 +21,13 @@ export const metadata: Metadata = {
   description: "with a passion for crafting modern web applications...",
 };
 
-const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   const classNames = [geistSans.variable, geistMono.variable, "antialiased"]
-    .filter(Boolean) // Убираем возможные undefined или пустые значения
+    .filter(Boolean)
     .join(" ");
 
   return (
@@ -36,6 +39,4 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
