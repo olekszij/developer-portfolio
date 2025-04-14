@@ -1,32 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Full Stack Developer Olek",
   description: "with a passion for crafting modern web applications...",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const classNames = [geistSans.variable, geistMono.variable, "antialiased"]
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+  const classNames = [GeistSans.variable, GeistMono.variable, "antialiased"]
     .filter(Boolean)
     .join(" ");
 
@@ -39,4 +23,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
