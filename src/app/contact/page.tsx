@@ -35,9 +35,13 @@ export default function Contact() {
                 name="contact"
                 method="POST"
                 data-netlify="true"
+                netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6 bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
             >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+
                 {status.type && (
                     <div className={`p-4 rounded-lg ${status.type === 'success'
                         ? 'bg-green-50 text-green-700 border border-green-200'
