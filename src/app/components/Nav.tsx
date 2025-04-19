@@ -68,6 +68,12 @@ const Nav = () => {
                     Projects
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                 </button>
+                <button
+                    onClick={() => scrollToSection('contact')}
+                    className="text-base font-medium text-black transition-all duration-300 relative group">
+                    Contact
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </button>
             </nav>
 
             {/* Mobile Navigation */}
@@ -96,6 +102,11 @@ const Nav = () => {
                             onClick={() => scrollToSection('projects')}
                             className="text-2xl font-medium text-black transition-all duration-300">
                             Projects
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('contact')}
+                            className="text-2xl font-medium text-black transition-all duration-300">
+                            Contact
                         </button>
                     </div>
                 </nav>

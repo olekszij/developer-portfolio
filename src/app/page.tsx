@@ -1,28 +1,33 @@
 'use client';
 
-import AboutMe from './AboutMe';
-import Projects from './Projects';
-import Technologies from './Technologies';
-import Header from './components/Header';
+import React from "react";
+import Header from "./components/Header";
+import AboutMe from "./AboutMe";
+import Technologies from "./Technologies";
+import Projects from "./Projects";
+import Contact from "./contact/page";
 
-const Home = () => (
-  <div className="min-h-screen bg-gray-50">
-    <Header />
-    <main className="container mx-auto md:px-20 lg:px-40 xl:px-52 pt-24">
-      <div id="about-me" className="py-12 animate-fadeIn">
-        <AboutMe />
-      </div>
-      <div id="technologies" className="py-12 animate-fadeIn">
-        <Technologies />
-      </div>
-      <div id="projects" className="py-12 animate-fadeIn">
-        <Projects />
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-white">
+      <Header />
+      <div className="container mx-auto md:px-20 lg:px-40 xl:px-52 pt-24">
+        <div id="about-me" className="py-12 animate-fadeIn">
+          <AboutMe />
+        </div>
+        <div id="technologies" className="py-12 animate-fadeIn">
+          <Technologies />
+        </div>
+        <div id="projects" className="py-12 animate-fadeIn">
+          <Projects />
+        </div>
+        <div id="contact" className="py-12 animate-fadeIn">
+          <Contact />
+        </div>
       </div>
     </main>
-  </div>
-);
-
-export default Home;
+  );
+}
 
 
 
