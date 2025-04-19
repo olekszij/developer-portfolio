@@ -6,7 +6,7 @@ import { FaReact } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <header className="fixed top-0 left-0 w-full bg-gray-800 text-white py-4 z-[9999]">
+        <header className="fixed top-0 left-0 w-full bg-gray-900 text-white py-4 z-[9999]">
             <style jsx global>{`
                 @keyframes spin-slow {
                     from {
