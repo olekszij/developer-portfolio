@@ -11,9 +11,12 @@ export default function Contact() {
         const formData = new FormData(form);
 
         try {
-            const response = await fetch('/', {
+            const response = await fetch('https://formspree.io/f/xblrozzg', {
                 method: 'POST',
                 body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
 
             if (response.ok) {
@@ -31,16 +34,9 @@ export default function Contact() {
         <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Get in Touch</h2>
             <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6 bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
             >
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
-
                 {status.type && (
                     <div className={`p-4 rounded-lg ${status.type === 'success'
                         ? 'bg-green-50 text-green-700 border border-green-200'
