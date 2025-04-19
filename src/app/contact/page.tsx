@@ -11,10 +11,9 @@ export default function Contact() {
         const formData = new FormData(form);
 
         try {
-            const response = await fetch('/', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(Array.from(formData.entries()) as [string, string][]).toString(),
+                body: formData,
             });
 
             if (response.ok) {
@@ -34,13 +33,10 @@ export default function Contact() {
             <form
                 name="contact"
                 method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6 bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
             >
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
 
                 {status.type && (
                     <div className={`p-4 rounded-lg ${status.type === 'success'
