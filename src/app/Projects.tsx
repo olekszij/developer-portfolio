@@ -20,7 +20,7 @@ const projects = [
     },
 
     {
-        name: "CocktailFinder",
+        name: "Cocktail Explorer",
         description: "Next.js/TypeScript",
         image: "/images/cocktail.png",
         link: "https://cool-cocktail-app.netlify.app/"
@@ -93,7 +93,7 @@ export default function Projects() {
                                             <div className="relative w-full overflow-hidden bg-gray-100">
                                                 <div className={`relative bg-[#f8f8f8] ${
                                                     // Vertical images
-                                                    project.name === "CocktailFinder" || project.name === "FileToFlash" ? 'aspect-[3/4]' :
+                                                    project.name === "Cocktail Explorer" || project.name === "FileToFlash" ? 'aspect-[3/4]' :
                                                         // Wide landscape images
                                                         index === 0 ? 'aspect-[16/10]' :
                                                             // Default square-ish ratio
@@ -125,7 +125,7 @@ export default function Projects() {
                                         <div className="relative w-full overflow-hidden bg-gray-100">
                                             <div className={`relative bg-[#f8f8f8] ${
                                                 // Vertical images
-                                                project.name === "CocktailFinder" || project.name === "FileToFlash" ? 'aspect-[3/4]' :
+                                                project.name === "Cocktail Explorer" || project.name === "FileToFlash" ? 'aspect-[3/4]' :
                                                     // Wide landscape images
                                                     index === 0 ? 'aspect-[16/10]' :
                                                         // Default square-ish ratio
