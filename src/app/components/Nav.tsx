@@ -41,63 +41,60 @@ const Nav = () => {
                 className="md:hidden text-2xl"
             >
                 <div className="relative">
-                    <svg width="0" height="0">
-                        <linearGradient id="hamburger-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop stopColor="#3B82F6" offset="0%" />
-                            <stop stopColor="#9333EA" offset="100%" />
-                        </linearGradient>
-                    </svg>
                     {isOpen ?
-                        <FaTimes size={28} style={{ fill: 'url(#hamburger-gradient)' }} /> :
-                        <FaBars size={28} style={{ fill: 'url(#hamburger-gradient)' }} />
+                        <FaTimes size={28} style={{ fill: 'black' }} /> :
+                        <FaBars size={28} style={{ fill: 'black' }} />
                     }
                 </div>
             </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex space-x-12">
                 <button
                     onClick={() => scrollToSection('about-me')}
-                    className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text transition-all duration-300 hover:scale-110">
+                    className="text-base font-medium text-black transition-all duration-300 relative group">
                     About Me
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 <button
                     onClick={() => scrollToSection('technologies')}
-                    className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text transition-all duration-300 hover:scale-110">
+                    className="text-base font-medium text-black transition-all duration-300 relative group">
                     Technologies
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 <button
                     onClick={() => scrollToSection('projects')}
-                    className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text transition-all duration-300 hover:scale-110">
+                    className="text-base font-medium text-black transition-all duration-300 relative group">
                     Projects
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                 </button>
             </nav>
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <nav className="fixed inset-0 bg-gray-800 z-50 md:hidden">
-                    <div className="absolute top-4 right-4">
+                <nav className="fixed inset-0 bg-white z-50 md:hidden">
+                    <div className="absolute top-6 right-6">
                         <button
                             onClick={() => setIsOpen(false)}
                             className="text-2xl"
                         >
-                            <FaTimes size={28} style={{ fill: 'url(#hamburger-gradient)' }} />
+                            <FaTimes size={28} style={{ fill: 'black' }} />
                         </button>
                     </div>
-                    <div className="flex flex-col items-center justify-center h-full space-y-8">
+                    <div className="flex flex-col items-center justify-center h-full space-y-12">
                         <button
                             onClick={() => scrollToSection('about-me')}
-                            className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text transition-all duration-300 hover:scale-110">
+                            className="text-2xl font-medium text-black transition-all duration-300">
                             About Me
                         </button>
                         <button
                             onClick={() => scrollToSection('technologies')}
-                            className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text transition-all duration-300 hover:scale-110">
+                            className="text-2xl font-medium text-black transition-all duration-300">
                             Technologies
                         </button>
                         <button
                             onClick={() => scrollToSection('projects')}
-                            className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text transition-all duration-300 hover:scale-110">
+                            className="text-2xl font-medium text-black transition-all duration-300">
                             Projects
                         </button>
                     </div>
