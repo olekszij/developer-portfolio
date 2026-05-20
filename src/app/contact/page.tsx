@@ -25,7 +25,7 @@ export default function Contact() {
             } else {
                 throw new Error('Network response was not ok');
             }
-        } catch (error) {
+        } catch {
             setStatus({ type: 'error', message: 'There was an error sending your message. Please try again.' });
         }
     };

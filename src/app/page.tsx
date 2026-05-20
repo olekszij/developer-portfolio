@@ -1,7 +1,6 @@
 'use client';
 
 import React from "react";
-import Header from "./components/Header";
 import AboutMe from "./AboutMe";
 import Technologies from "./Technologies";
 import Projects from "./Projects";
@@ -10,7 +9,6 @@ import Contact from "./contact/page";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <Header />
       <div className="container mx-auto md:px-20 lg:px-40 xl:px-52 pt-24">
         <div id="about-me" className="py-12 animate-fadeIn">
           <AboutMe />
@@ -28,6 +26,5 @@ export default function Home() {
     </main>
   );
 }
-
 
 

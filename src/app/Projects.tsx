@@ -10,13 +10,13 @@ const projects = [
         name: "Perfect App",
         description: "React and Node.js",
         image: "/images/perfect-cab.png",
-        link: "https://perfect-app.netlify.app/"
+        link: "https://perfectcab.fr/fr/"
     },
     {
-        name: "FileToFlash",
-        description: "Next.js/TypeScript - OCR Flashcard App",
-        image: "/images/flash.png",
-        link: "https://filetoflash.netlify.app/"
+        name: "Roadmap Academy",
+        description: "Interactive visual roadmaps for UX/UI design and Web Development",
+        image: "/images/roadmapux.netlify.app__Pixel-7_.webp",
+        link: "https://roadmapux.netlify.app/"
     },
 
     {
@@ -93,7 +93,7 @@ export default function Projects() {
                                             <div className="relative w-full overflow-hidden bg-gray-100">
                                                 <div className={`relative bg-[#f8f8f8] ${
                                                     // Vertical images
-                                                    project.name === "Cocktail Explorer" || project.name === "FileToFlash" ? 'aspect-[3/4]' :
+                                                    project.name === "Cocktail Explorer" || project.name === "Roadmap Academy" ? 'aspect-[3/4]' :
                                                         // Wide landscape images
                                                         index === 0 ? 'aspect-[16/10]' :
                                                             // Default square-ish ratio
