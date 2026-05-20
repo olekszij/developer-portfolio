@@ -71,7 +71,7 @@ export default function CoreSkills() {
             <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4 tracking-tight">Core Skills</h2>
-                    <p className="text-gray-500 text-lg max-w-2xl mx-auto font-light">
+                    <p className="text-gray-900 text-lg max-w-2xl mx-auto font-light">
                         A practical snapshot of the skills I use to build, test, and support modern web applications.
                     </p>
                 </div>
