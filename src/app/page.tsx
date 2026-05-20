@@ -3,6 +3,7 @@
 import React from "react";
 import AboutMe from "./AboutMe";
 import Technologies from "./Technologies";
+import CoreSkills from "./CoreSkills";
 import Projects from "./Projects";
 import Contact from "./contact/page";
 
@@ -16,6 +17,9 @@ export default function Home() {
         <div id="technologies" className="py-12 animate-fadeIn">
           <Technologies />
         </div>
+        <div id="skills" className="py-12 animate-fadeIn">
+          <CoreSkills />
+        </div>
         <div id="projects" className="py-12 animate-fadeIn">
           <Projects />
         </div>
@@ -26,5 +30,4 @@ export default function Home() {
     </main>
   );
 }
-
 
