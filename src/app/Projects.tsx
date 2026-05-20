@@ -7,18 +7,17 @@ import Masonry from 'react-masonry-css';
 
 const projects = [
     {
-        name: "Perfect App",
-        description: "React and Node.js",
-        image: "/images/perfect-cab.png",
-        link: "https://perfectcab.fr/fr/"
-    },
-    {
         name: "Roadmap Academy",
         description: "Interactive visual roadmaps for UX/UI design and Web Development",
         image: "/images/roadmapux.netlify.app__Pixel-7_.webp",
         link: "https://roadmapux.netlify.app/"
     },
-
+    {
+        name: "Perfect App",
+        description: "React and Node.js",
+        image: "/images/perfect-cab.png",
+        link: "https://perfectcab.fr/fr/"
+    },
     {
         name: "Cocktail Explorer",
         description: "Next.js/TypeScript",
@@ -125,7 +124,7 @@ export default function Projects() {
                                         <div className="relative w-full overflow-hidden bg-gray-100">
                                             <div className={`relative bg-[#f8f8f8] ${
                                                 // Vertical images
-                                                project.name === "Cocktail Explorer" || project.name === "FileToFlash" ? 'aspect-[3/4]' :
+                                                project.name === "Cocktail Explorer" ? 'aspect-[3/4]' :
                                                     // Wide landscape images
                                                     index === 0 ? 'aspect-[16/10]' :
                                                         // Default square-ish ratio
