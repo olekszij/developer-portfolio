@@ -119,7 +119,7 @@ export default function Projects() {
                                                     <span>{project.name}</span>
                                                     <BiLinkExternal className="text-lg md:text-xl lg:text-2xl opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#22c55e]" />
                                                 </h3>
-                                                <p className="mt-3 text-gray-600 font-light text-base md:text-lg">
+                                                <p className="mt-3 text-gray-600  text-base md:text-lg">
                                                     {project.description}
                                                 </p>
                                                 <p className="mt-4 text-sm font-semibold text-gray-900">
