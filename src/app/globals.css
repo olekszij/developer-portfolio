@@ -30,20 +30,14 @@ p {
 }
 
 .cv-editorial-shell {
-  background: #f5f2ed;
+  background: #ffffff;
   color: #0f0e0c;
   font-family: "Georgia", "Times New Roman", serif;
   position: relative;
 }
 
 .cv-editorial-shell::before {
-  background-image: radial-gradient(rgba(15, 14, 12, 0.08) 0.55px, transparent 0.55px);
-  background-size: 7px 7px;
-  content: "";
-  inset: 0;
-  opacity: 0.22;
-  pointer-events: none;
-  position: fixed;
+  display: none;
 }
 
 .cv-editorial-page {
@@ -81,7 +75,7 @@ p {
 
 .cv-editorial-header h1 {
   color: #0f0e0c;
-  font-family: "Iowan Old Style", "Baskerville", Georgia, serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: clamp(2.45rem, 6vw, 4.2rem);
   font-weight: 700;
   letter-spacing: 0;
@@ -257,15 +251,6 @@ p {
   margin: 0;
 }
 
-.cv-editorial-deco {
-  color: #d9d4cb;
-  font-family: "Iowan Old Style", "Baskerville", Georgia, serif;
-  font-size: 5.6rem;
-  line-height: 0.9;
-  margin-top: 0.8rem;
-  text-align: right;
-}
-
 .cv-editorial-summary {
   color: rgba(15, 14, 12, 0.86);
   font-family: "Inter", sans-serif;
@@ -335,9 +320,6 @@ p {
     padding: 2rem 0 0;
   }
 
-  .cv-editorial-deco {
-    display: none;
-  }
 }
 
 @media print {
@@ -391,7 +373,6 @@ p {
   }
 
   .cv-editorial-eyebrow,
-  .cv-editorial-deco,
   .cv-editorial-tags,
   .cv-editorial-languages {
     display: none !important;

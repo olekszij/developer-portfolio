@@ -206,11 +206,6 @@ export default function CvPage() {
                             </div>
                         </section>
 
-                        <div aria-hidden="true" className="cv-editorial-deco">
-                            07
-                            <br />
-                            yrs
-                        </div>
                     </aside>
 
                     <div className="cv-editorial-main">
