@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
@@ -18,9 +19,10 @@ const Nav = () => {
         };
     }, [isOpen]);
 
-    const scrollToSection = (sectionId: string) => {
+    const scrollToSection = (sectionId: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
         const element = document.getElementById(sectionId);
         if (element) {
+            e?.preventDefault();
             const offset = 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
@@ -29,8 +31,8 @@ const Nav = () => {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
-            setIsOpen(false);
         }
+        setIsOpen(false);
     };
 
     return (
@@ -50,30 +52,34 @@ const Nav = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-12">
-                <button
-                    onClick={() => scrollToSection('about-me')}
+                <Link
+                    href="/#about-me"
+                    onClick={(e) => scrollToSection('about-me', e)}
                     className="text-base font-medium text-black transition-all duration-300 relative group">
                     About Me
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </button>
-                <button
-                    onClick={() => scrollToSection('skills')}
+                </Link>
+                <Link
+                    href="/#skills"
+                    onClick={(e) => scrollToSection('skills', e)}
                     className="text-base font-medium text-black transition-all duration-300 relative group">
                     Skills
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full"></span>
-                </button>
-                <button
-                    onClick={() => scrollToSection('projects')}
+                </Link>
+                <Link
+                    href="/#projects"
+                    onClick={(e) => scrollToSection('projects', e)}
                     className="text-base font-medium text-black transition-all duration-300 relative group">
                     Projects
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
-                </button>
-                <button
-                    onClick={() => scrollToSection('contact')}
+                </Link>
+                <Link
+                    href="/#contact"
+                    onClick={(e) => scrollToSection('contact', e)}
                     className="text-base font-medium text-black transition-all duration-300 relative group">
                     Contact
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                </Link>
             </nav>
 
             {/* Mobile Navigation */}
@@ -88,26 +94,30 @@ const Nav = () => {
                         </button>
                     </div>
                     <div className="flex flex-col items-center justify-center h-full space-y-12">
-                        <button
-                            onClick={() => scrollToSection('about-me')}
+                        <Link
+                            href="/#about-me"
+                            onClick={(e) => scrollToSection('about-me', e)}
                             className="text-2xl font-medium text-black transition-all duration-300">
                             About Me
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('skills')}
+                        </Link>
+                        <Link
+                            href="/#skills"
+                            onClick={(e) => scrollToSection('skills', e)}
                             className="text-2xl font-medium text-black transition-all duration-300">
                             Skills
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('projects')}
+                        </Link>
+                        <Link
+                            href="/#projects"
+                            onClick={(e) => scrollToSection('projects', e)}
                             className="text-2xl font-medium text-black transition-all duration-300">
                             Projects
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('contact')}
+                        </Link>
+                        <Link
+                            href="/#contact"
+                            onClick={(e) => scrollToSection('contact', e)}
                             className="text-2xl font-medium text-black transition-all duration-300">
                             Contact
-                        </button>
+                        </Link>
                     </div>
                 </nav>
             )}

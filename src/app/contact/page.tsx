@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
     const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
@@ -31,8 +32,39 @@ export default function Contact() {
     };
 
     return (
-        <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+        <div className="max-w-3xl mx-auto px-4">
+            <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-950">Get in Touch</h2>
+                <p className="mt-4 text-lg text-gray-700">
+                    Open to web-development roles and product-minded projects. Reach out here or find me on:
+                </p>
+                <div className="mt-5 flex flex-col sm:flex-row justify-center gap-3">
+                    <a
+                        href="https://github.com/olekszij"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-3 font-semibold text-gray-950 transition hover:border-gray-300 hover:bg-gray-50"
+                    >
+                        <FaGithub size={20} />
+                        GitHub
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/olek-k/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-3 font-semibold text-gray-950 transition hover:border-gray-300 hover:bg-gray-50"
+                    >
+                        <FaLinkedin size={20} />
+                        LinkedIn
+                    </a>
+                    <a
+                        href="/cv"
+                        className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-3 font-semibold text-gray-950 transition hover:border-gray-300 hover:bg-gray-50"
+                    >
+                        View CV
+                    </a>
+                </div>
+            </div>
             <form
                 onSubmit={handleSubmit}
                 className="space-y-6 bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)]"

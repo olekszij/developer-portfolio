@@ -10,7 +10,7 @@ const marker = Permanent_Marker({
 
 const CrumpledNameTag = () => {
     return (
-        <div className="w-[400px] mx-auto p-4">
+        <div className="w-full max-w-[400px] mx-auto p-3 sm:p-4">
             <div className="relative transform hover:-translate-y-1 transition-all duration-300">
                 {/* Shadow effect */}
                 <div className="absolute -bottom-2 -right-2 w-full h-full bg-black/10 blur-sm -z-10 rotate-2"></div>
@@ -27,8 +27,8 @@ const CrumpledNameTag = () => {
                         {/* Content */}
                         <div className="p-6">
                             <div className="space-y-1">
-                                <h1 className="text-white text-5xl font-extrabold tracking-wide text-center">HELLO</h1>
-                                <p className="text-white text-xl font-bold tracking-wider text-center">MY NAME IS</p>
+                                <div className="text-white text-4xl sm:text-5xl font-extrabold tracking-wide text-center">HELLO</div>
+                                <p className="text-white text-lg sm:text-xl font-bold tracking-wider text-center">MY NAME IS</p>
                             </div>
 
                             {/* Name field */}
@@ -39,8 +39,8 @@ const CrumpledNameTag = () => {
                                 {/* Field texture */}
                                 <div className="absolute inset-0 opacity-50 mix-blend-multiply bg-[url('/textures/white-paper-texture.jpg')] bg-cover"></div>
 
-                                <div className={`${marker.className} text-black text-6xl text-center relative`}>
-                                    Alex
+                                <div className={`${marker.className} text-black text-5xl sm:text-6xl text-center relative`}>
+                                    Olek
                                 </div>
                             </div>
                         </div>

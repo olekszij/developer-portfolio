@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white py-4">
             <div className="container mx-auto text-center">
-                <p className="text-sm">© 2024 Olek K. All rights reserved.</p>
+                <p className="text-sm">© {new Date().getFullYear()} Olek K. All rights reserved.</p>
             </div>
             <div className="container mx-auto text-center"></div>
             <div className="flex justify-center space-x-4 pt-4">
