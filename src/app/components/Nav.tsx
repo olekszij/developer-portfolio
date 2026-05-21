@@ -39,6 +39,7 @@ const Nav = () => {
         <div className="relative">
             {/* Hamburger button */}
             <button
+                aria-label="Toggle navigation menu"
                 onClick={() => setIsOpen(!isOpen)}
                 className="md:hidden text-2xl"
             >
@@ -87,6 +88,7 @@ const Nav = () => {
                 <nav className="fixed inset-0 bg-white z-50 md:hidden">
                     <div className="absolute top-6 right-6">
                         <button
+                            aria-label="Close navigation menu"
                             onClick={() => setIsOpen(false)}
                             className="text-2xl"
                         >
