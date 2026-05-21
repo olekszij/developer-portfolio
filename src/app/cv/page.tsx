@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaDownload } from 'react-icons/fa';
+import { FaDownload, FaArrowLeft } from 'react-icons/fa';
 
 const skillGroups = [
     {
@@ -111,7 +111,8 @@ export default function CvPage() {
                     href="/"
                     className="inline-flex items-center justify-center rounded-lg border border-black/10 bg-white/80 px-5 py-3 font-semibold text-[#0f0e0c] transition hover:bg-white"
                 >
-                    Back to Portfolio
+                <FaArrowLeft />
+
                 </Link>
                 <div className="flex flex-col gap-3 sm:flex-row">
                     <a
@@ -120,7 +121,6 @@ export default function CvPage() {
                         className="inline-flex items-center justify-center gap-2 rounded-lg border border-black/10 bg-white/80 px-5 py-3 font-semibold text-[#0f0e0c] transition hover:bg-white"
                     >
                         <FaDownload size={16} />
-                        Download PDF
                     </a>
                 </div>
             </div>
