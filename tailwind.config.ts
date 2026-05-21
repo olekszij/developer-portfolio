@@ -2,9 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/app/**/*.{js,ts,jsx,tsx}',        // Для всех файлов в папке src/app
-    './src/components/**/*.{js,ts,jsx,tsx}', // Для всех файлов в папке src/components
-    './src/pages/**/*.{js,ts,jsx,tsx}',      // Для всех файлов в папке src/pages (если используется)
+    './src/app/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -14,12 +14,17 @@ const config: Config = {
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
+          '0%': { opacity: '0.3' },
           '100%': { opacity: '1' },
+        },
+        'spin-slow': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
         },
       },
       animation: {
-        fadeIn: 'fadeIn 1s ease-in-out forwards',  // Добавлено `forwards`, чтобы анимация оставалась в конце
+        fadeIn: 'fadeIn 0.4s ease-out forwards',
+        'spin-slow': 'spin-slow 20s linear infinite',
       },
     },
   },

@@ -110,7 +110,8 @@ export default function Projects() {
                                                         fill
                                                         className="object-contain transition-all duration-500"
                                                         sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 33vw"
-                                                        priority={index < 4}
+                                                        priority={index < 2}
+                                                        loading={index < 2 ? undefined : "lazy"}
                                                     />
                                                 </div>
                                             </div>
@@ -145,7 +146,8 @@ export default function Projects() {
                                                     fill
                                                     className="object-contain transition-all duration-500"
                                                     sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 33vw"
-                                                    priority={index < 4}
+                                                    priority={index < 2}
+                                                    loading={index < 2 ? undefined : "lazy"}
                                                 />
                                             </div>
                                         </div>

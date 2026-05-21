@@ -1,16 +1,38 @@
-import type { Metadata } from "next";
-import { GeistSans, GeistMono } from "geist/font";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { GeistMono } from "geist/font";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "800"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
 export const metadata: Metadata = {
   title: "Full Stack Developer Olek",
-  description: "with a passion for crafting modern web applications...",
+  description:
+    "Full-stack web developer specialising in React, Next.js, TypeScript and Node.js. Building modern web applications with a strong UX eye.",
+  metadataBase: new URL("https://olekdev.netlify.app"),
+  openGraph: {
+    title: "Full Stack Developer Olek",
+    description:
+      "Full-stack web developer specialising in React, Next.js, TypeScript and Node.js.",
+    type: "website",
+  },
 };
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
-  const classNames = [GeistSans.variable, GeistMono.variable, "antialiased"]
+  const classNames = [inter.variable, GeistMono.variable, "antialiased"]
     .filter(Boolean)
     .join(" ");
 
