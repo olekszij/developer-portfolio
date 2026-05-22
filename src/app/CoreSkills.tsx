@@ -21,7 +21,6 @@ const skillGroups: {
             { name: 'TypeScript', icon: SiTypescript },
             { name: 'HTML5 / CSS3' },
             { name: 'Tailwind CSS', icon: SiTailwindcss },
-            { name: 'UX Design' },
         ],
     },
     {
@@ -32,35 +31,28 @@ const skillGroups: {
         skills: [
             { name: 'Node.js', icon: SiNodedotjs },
             { name: 'Express', icon: SiExpress },
-            { name: 'REST API Design' },
-            { name: 'PostgreSQL / SQL', icon: SiPostgresql },
-            { name: 'Neon.tech' },
+            { name: 'PostgreSQL', icon: SiPostgresql },
             { name: 'MongoDB', icon: SiMongodb },
         ],
     },
     {
-        title: 'Testing & Automation',
-        description: 'Checking real user flows and keeping projects reliable as they grow.',
+        title: 'Testing',
+        description: 'Checking real user flows and keeping projects reliable.',
         icon: FaVial,
         accent: '#7c3aed',
         skills: [
             { name: 'Vitest', icon: SiVitest },
             { name: 'Playwright', icon: FaVial },
-            { name: 'Automation' },
-            { name: 'AI-assisted workflows' },
         ],
     },
     {
-        title: 'Tools & Support',
-        description: 'Working cleanly with code, planning, debugging, and practical support.',
+        title: 'Tools',
+        description: 'Working cleanly with code, planning, and debugging.',
         icon: FaTools,
         accent: '#dc2626',
         skills: [
             { name: 'Git', icon: FaGithub },
             { name: 'GitHub', icon: FaGithub },
-            { name: 'Project Management' },
-            { name: 'IT Support' },
-            { name: 'Troubleshooting' },
         ],
     },
 ];

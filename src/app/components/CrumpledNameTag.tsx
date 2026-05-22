@@ -5,7 +5,9 @@ import { Permanent_Marker } from "next/font/google";
 
 const marker = Permanent_Marker({
     weight: '400',
-    subsets: ['latin']
+    subsets: ['latin'],
+    display: 'swap',
+    preload: false,
 });
 
 const CrumpledNameTag = () => {
@@ -21,8 +23,6 @@ const CrumpledNameTag = () => {
                         style={{
                             boxShadow: 'inset 0 0 20px rgba(0,0,0,0.2), 0 2px 6px rgba(0,0,0,0.1)'
                         }}>
-                        {/* Paper texture */}
-                        <div className="absolute inset-0 opacity-30 mix-blend-multiply bg-[url('/textures/white-paper-texture.jpg')] bg-cover"></div>
 
                         {/* Content */}
                         <div className="p-6">
@@ -36,8 +36,6 @@ const CrumpledNameTag = () => {
                                 style={{
                                     boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.1)'
                                 }}>
-                                {/* Field texture */}
-                                <div className="absolute inset-0 opacity-50 mix-blend-multiply bg-[url('/textures/white-paper-texture.jpg')] bg-cover"></div>
 
                                 <div className={`${marker.className} text-black text-5xl sm:text-6xl text-center relative`}>
                                     Olek

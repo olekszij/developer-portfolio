@@ -17,21 +17,21 @@ const projects = [
         name: "Perfect Cab",
         description: "Customer-facing cab service experience with booking-oriented pages and a real business presence.",
         stack: "React · Node.js",
-        image: "/images/perfect-cab.png",
+        image: "/images/perfect-cab.webp",
         link: "https://perfectcab.fr/fr/"
     },
     {
         name: "Paris Design Patrimoine",
         description: "A polished construction-company site shaped around services, trust, and easy client contact.",
         stack: "Next.js · Tailwind CSS",
-        image: "/images/parisdesignpatrimoine.png",
+        image: "/images/parisdesignpatrimoine.webp",
         link: "https://parisdesignpatrimoine.netlify.app/"
     },
     {
         name: "Cocktail Explorer",
         description: "Recipe discovery app for exploring cocktails through a clear search and browsing experience.",
         stack: "Next.js · TypeScript",
-        image: "/images/cocktail.png",
+        image: "/images/cocktail.webp",
         link: "https://cool-cocktail-app.netlify.app/"
     },
     {
@@ -41,20 +41,11 @@ const projects = [
         image: "/images/project8.jpg",
         link: "https://tmdb-quiz.vercel.app/"
     },
-    {
-        name: "English Level Test App",
-        description: "English-level testing flow designed to keep assessment steps focused and readable.",
-        stack: "Next.js · TypeScript",
-        image: "/images/project6.jpg",
-        link: "https://cefr.netlify.app"
-    },
 ];
 
 export default function Projects() {
     const breakpointColumns = {
-        default: 3,
-        1920: 3,
-        1536: 2,
+        default: 2,
         1280: 2,
         768: 1
     };
@@ -109,9 +100,10 @@ export default function Projects() {
                                                         alt={project.name}
                                                         fill
                                                         className="object-contain transition-all duration-500"
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 33vw"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 40vw"
                                                         priority={index < 2}
                                                         loading={index < 2 ? undefined : "lazy"}
+                                                        quality={85}
                                                     />
                                                 </div>
                                             </div>
@@ -145,9 +137,10 @@ export default function Projects() {
                                                     alt={project.name}
                                                     fill
                                                     className="object-contain transition-all duration-500"
-                                                    sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 33vw"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 50vw"
                                                     priority={index < 2}
                                                     loading={index < 2 ? undefined : "lazy"}
+                                                    quality={85}
                                                 />
                                             </div>
                                         </div>

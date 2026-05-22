@@ -10,6 +10,7 @@ const inter = Inter({
   weight: ["400", "600", "800"],
   display: "swap",
   variable: "--font-inter",
+  preload: true,
 });
 
 export const viewport: Viewport = {

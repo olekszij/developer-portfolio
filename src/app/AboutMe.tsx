@@ -26,6 +26,9 @@ const AboutMe = () => {
                                         `
                                     }}
                                     priority
+                                    fetchPriority="high"
+                                    quality={90}
+                                    sizes="(max-width: 768px) 300px, 400px"
                                 />
                             </div>
                         </div>
