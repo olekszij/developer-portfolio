@@ -1,13 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef<HTMLElement>(null);
+    const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
-    // Блокируем скролл при открытом меню
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -18,6 +19,37 @@ const Nav = () => {
             document.body.style.overflow = 'unset';
         };
     }, [isOpen]);
+
+    const handleKeyDown = useCallback((e: KeyboardEvent) => {
+        if (!isOpen) return;
+
+        if (e.key === 'Escape') {
+            setIsOpen(false);
+            toggleButtonRef.current?.focus();
+            return;
+        }
+
+        if (e.key === 'Tab' && menuRef.current) {
+            const focusable = menuRef.current.querySelectorAll<HTMLElement>(
+                'a, button, [tabindex]:not([tabindex="-1"])'
+            );
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+    }, [isOpen]);
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [handleKeyDown]);
 
     const scrollToSection = (sectionId: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
         const element = document.getElementById(sectionId);
@@ -37,9 +69,10 @@ const Nav = () => {
 
     return (
         <div className="relative">
-            {/* Hamburger button */}
             <button
+                ref={toggleButtonRef}
                 aria-label="Toggle navigation menu"
+                aria-expanded={isOpen}
                 onClick={() => setIsOpen(!isOpen)}
                 className="md:hidden text-2xl"
             >
@@ -51,7 +84,6 @@ const Nav = () => {
                 </div>
             </button>
 
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-12">
                 <Link
                     href="/#about-me"
@@ -83,9 +115,8 @@ const Nav = () => {
                 </Link>
             </nav>
 
-            {/* Mobile Navigation */}
             {isOpen && (
-                <nav className="fixed inset-0 bg-white z-50 md:hidden">
+                <nav ref={menuRef} className="fixed inset-0 bg-white z-50 md:hidden" role="dialog" aria-modal="true" aria-label="Navigation menu">
                     <div className="absolute top-6 right-6">
                         <button
                             aria-label="Close navigation menu"

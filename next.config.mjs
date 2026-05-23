@@ -15,7 +15,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   experimental: {
-    optimizePackageImports: ['react-icons', 'framer-motion'],
+    optimizePackageImports: ['react-icons'],
   },
 };
 

@@ -1,14 +1,12 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white py-4">
             <div className="container mx-auto text-center">
                 <p className="text-sm">© {new Date().getFullYear()} Olek K. All rights reserved.</p>
             </div>
-            <div className="container mx-auto text-center"></div>
             <div className="flex justify-center space-x-4 pt-4">
                 <a href="https://github.com/olekszij" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                     <FaGithub size={24} />
@@ -16,10 +14,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/olek-k/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                     <FaLinkedin size={24} />
                 </a>
-
             </div>
-
-
         </footer>
     );
 };

@@ -1,8 +1,8 @@
 import React from "react";
-import AboutMe from "./AboutMe";
-import CoreSkills from "./CoreSkills";
-import Projects from "./Projects";
-import Contact from "./contact/page";
+import AboutMe from "./_sections/AboutMe";
+import CoreSkills from "./_sections/CoreSkills";
+import Projects from "./_sections/Projects";
+import ContactSection from "./_sections/ContactSection";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
           <Projects />
         </div>
         <div id="contact" className="scroll-mt-28 py-8 md:py-12">
-          <Contact />
+          <ContactSection />
         </div>
       </div>
     </main>

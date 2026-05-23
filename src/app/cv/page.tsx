@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaDownload, FaArrowLeft } from 'react-icons/fa';
+import './cv-editorial.css';
 
 const skillGroups = [
     {
