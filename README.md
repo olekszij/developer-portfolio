@@ -3,7 +3,7 @@ Olek's Developer Portfolio
 
 Welcome to my portfolio! This site showcases the projects, technologies, and skills I've developed as a web developer.
 
-[View my live portfolio here!](https://olekszijk.github.io/developer-portfolio/)
+[View my live portfolio here!](https://olekdev.netlify.app/)
 
 About
 -----

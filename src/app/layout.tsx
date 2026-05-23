@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   description:
     "Full-stack web developer specialising in React, Next.js, TypeScript and Node.js. Building modern web applications with a strong UX eye.",
   metadataBase: new URL("https://olekdev.netlify.app"),
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Full Stack Developer Olek",
     description:
@@ -41,7 +45,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     <html lang="en">
       <body className={classNames}>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

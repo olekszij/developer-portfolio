@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaDownload, FaArrowLeft } from 'react-icons/fa';
+import './cv-editorial.css';
 
 const skillGroups = [
     {
@@ -105,7 +106,7 @@ function ExperienceList({
 
 export default function CvPage() {
     return (
-        <div className="cv-editorial-shell min-h-screen px-4 pb-16 pt-28">
+        <main className="cv-editorial-shell min-h-screen px-4 pb-16 pt-28">
             <div className="print-hidden mx-auto mb-6 flex max-w-[960px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <Link
                     href="/"
@@ -231,6 +232,6 @@ export default function CvPage() {
                     </div>
                 </div>
             </article>
-        </div>
+        </main>
     );
 }

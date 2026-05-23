@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CrumpledNameTag from "./components/CrumpledNameTag";
+import CrumpledNameTag from "../components/CrumpledNameTag";
 
 const AboutMe = () => {
     return (
