@@ -1,13 +1,18 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import { FaBars, FaTimes } from 'react-icons/fa';
+
+const navItems = [
+    { id: 'services', label: 'Services' },
+    { id: 'processus', label: 'Processus' },
+    { id: 'realisations', label: 'Réalisations' },
+    { id: 'faq', label: 'FAQ' },
+];
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    // Блокируем скролл при открытом меню
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -19,107 +24,80 @@ const Nav = () => {
         };
     }, [isOpen]);
 
-    const scrollToSection = (sectionId: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
+    const scrollToSection = (sectionId: string, e?: React.MouseEvent) => {
+        e?.preventDefault();
         const element = document.getElementById(sectionId);
         if (element) {
-            e?.preventDefault();
             const offset = 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
         setIsOpen(false);
     };
 
     return (
         <div className="relative">
-            {/* Hamburger button */}
             <button
-                aria-label="Toggle navigation menu"
+                aria-label="Ouvrir le menu de navigation"
                 onClick={() => setIsOpen(!isOpen)}
                 className="md:hidden text-2xl"
             >
-                <div className="relative">
-                    {isOpen ?
-                        <FaTimes size={28} style={{ fill: 'black' }} /> :
-                        <FaBars size={28} style={{ fill: 'black' }} />
-                    }
-                </div>
+                {isOpen ? (
+                    <FaTimes size={24} className="text-gray-950" />
+                ) : (
+                    <FaBars size={24} className="text-gray-950" />
+                )}
             </button>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-12">
-                <Link
-                    href="/#about-me"
-                    onClick={(e) => scrollToSection('about-me', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
-                    About Me
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <Link
-                    href="/#skills"
-                    onClick={(e) => scrollToSection('skills', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
-                    Skills
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <Link
-                    href="/#projects"
-                    onClick={(e) => scrollToSection('projects', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
-                    Projects
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <Link
-                    href="/#contact"
+            <nav className="hidden md:flex items-center space-x-8">
+                {navItems.map((item) => (
+                    <a
+                        key={item.id}
+                        href={`#${item.id}`}
+                        onClick={(e) => scrollToSection(item.id, e)}
+                        className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors"
+                    >
+                        {item.label}
+                    </a>
+                ))}
+                <a
+                    href="#contact"
                     onClick={(e) => scrollToSection('contact', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
+                    className="inline-flex items-center justify-center rounded-lg bg-gray-950 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-800"
+                >
                     Contact
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </a>
             </nav>
 
-            {/* Mobile Navigation */}
             {isOpen && (
                 <nav className="fixed inset-0 bg-white z-50 md:hidden">
-                    <div className="absolute top-6 right-6">
+                    <div className="absolute top-5 right-4">
                         <button
-                            aria-label="Close navigation menu"
+                            aria-label="Fermer le menu de navigation"
                             onClick={() => setIsOpen(false)}
-                            className="text-2xl"
                         >
-                            <FaTimes size={28} style={{ fill: 'black' }} />
+                            <FaTimes size={24} className="text-gray-950" />
                         </button>
                     </div>
-                    <div className="flex flex-col items-center justify-center h-full space-y-12">
-                        <Link
-                            href="/#about-me"
-                            onClick={(e) => scrollToSection('about-me', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
-                            About Me
-                        </Link>
-                        <Link
-                            href="/#skills"
-                            onClick={(e) => scrollToSection('skills', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
-                            Skills
-                        </Link>
-                        <Link
-                            href="/#projects"
-                            onClick={(e) => scrollToSection('projects', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
-                            Projects
-                        </Link>
-                        <Link
-                            href="/#contact"
+                    <div className="flex flex-col items-center justify-center h-full space-y-10">
+                        {navItems.map((item) => (
+                            <a
+                                key={item.id}
+                                href={`#${item.id}`}
+                                onClick={(e) => scrollToSection(item.id, e)}
+                                className="text-2xl font-semibold text-gray-950"
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+                        <a
+                            href="#contact"
                             onClick={(e) => scrollToSection('contact', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
+                            className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white"
+                        >
                             Contact
-                        </Link>
+                        </a>
                     </div>
                 </nav>
             )}
