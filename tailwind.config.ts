@@ -18,8 +18,8 @@ const config: Config = {
           '100%': { opacity: '1' },
         },
         'spin-slow': {
-          from: { transform: 'rotate(0deg)' },
-          to: { transform: 'rotate(360deg)' },
+          from: { transform: 'rotate(0deg) translateZ(0)' },
+          to: { transform: 'rotate(360deg) translateZ(0)' },
         },
       },
       animation: {
