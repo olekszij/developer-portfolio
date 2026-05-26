@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { BiLinkExternal } from 'react-icons/bi';
-import Masonry from 'react-masonry-css';
 
 const projects = [
     {
@@ -44,12 +43,6 @@ const projects = [
 ];
 
 export default function Projects() {
-    const breakpointColumns = {
-        default: 2,
-        1280: 2,
-        768: 1
-    };
-
     const handleDoubleClick = (link: string) => {
         if (link !== "#") {
             window.open(link, '_blank');
@@ -65,15 +58,11 @@ export default function Projects() {
                         A few projects that show how I combine product thinking, frontend craft, and full-stack delivery.
                     </p>
                 </div>
-                <Masonry
-                    breakpointCols={breakpointColumns}
-                    className="flex -ml-8 md:-ml-12 w-auto"
-                    columnClassName="pl-8 md:pl-12 bg-clip-padding"
-                >
+                <div className="columns-1 md:columns-2 gap-8 md:gap-12 w-full">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="mb-8 md:mb-12"
+                            className="break-inside-avoid mb-8 md:mb-12"
                         >
                             <div
                                 className="group relative transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-3xl cursor-pointer"
@@ -161,7 +150,7 @@ export default function Projects() {
                             </div>
                         </div>
                     ))}
-                </Masonry>
+                </div>
             </div>
         </section>
     );
