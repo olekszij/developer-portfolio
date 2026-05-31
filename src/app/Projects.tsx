@@ -6,13 +6,6 @@ import { BiLinkExternal } from 'react-icons/bi';
 
 const projects = [
     {
-        name: "Roadmap Academy",
-        description: "Interactive learning roadmaps that turn UX/UI and web-development topics into clear next steps.",
-        stack: "Next.js · TypeScript · UX",
-        image: "/images/roadmapux.netlify.app__Pixel-7_.webp",
-        link: "https://roadmapux.netlify.app/"
-    },
-    {
         name: "Perfect Cab",
         description: "Customer-facing cab service experience with booking-oriented pages and a real business presence.",
         stack: "React · Node.js",
@@ -20,11 +13,18 @@ const projects = [
         link: "https://perfectcab.fr/fr/"
     },
     {
-        name: "Paris Design Patrimoine",
-        description: "A polished construction-company site shaped around services, trust, and easy client contact.",
-        stack: "Next.js · Tailwind CSS",
-        image: "/images/parisdesignpatrimoine.webp",
-        link: "https://parisdesignpatrimoine.netlify.app/"
+        name: "Roadmap Academy",
+        description: "Interactive learning roadmaps that turn UX/UI and web-development topics into clear next steps.",
+        stack: "Next.js · TypeScript · UX",
+        image: "/images/roadmap-academy.png",
+        link: "https://roadmapux.netlify.app/"
+    },
+    {
+        name: "PragmaBAT",
+        description: "Renovation-company website presenting services, guarantees, and completed interior projects.",
+        stack: "HTML · CSS · JavaScript",
+        image: "/images/pragmabat.png",
+        link: "https://pragmabat.netlify.app/"
     },
     {
         name: "Cocktail Explorer",
@@ -39,6 +39,13 @@ const projects = [
         stack: "Next.js · TypeScript",
         image: "/images/project8.jpg",
         link: "https://tmdb-quiz.vercel.app/"
+    },
+    {
+        name: "Paris Design Patrimoine",
+        description: "A polished construction-company site shaped around services, trust, and easy client contact.",
+        stack: "Next.js · Tailwind CSS",
+        image: "/images/parisdesignpatrimoine.webp",
+        link: "https://parisdesignpatrimoine.netlify.app/"
     },
 ];
 
@@ -78,7 +85,7 @@ export default function Projects() {
                                             <div className="relative w-full overflow-hidden bg-gray-100">
                                                 <div className={`relative bg-[#f8f8f8] ${
                                                     // Vertical images
-                                                    project.name === "Cocktail Explorer" || project.name === "Roadmap Academy" ? 'aspect-[3/4]' :
+                                                    project.name === "Cocktail Explorer" ? 'aspect-[3/4]' :
                                                         // Wide landscape images
                                                         index === 0 ? 'aspect-[16/10]' :
                                                             // Default square-ish ratio
