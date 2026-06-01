@@ -16,21 +16,21 @@ const projects = [
         name: "Roadmap Academy",
         description: "Interactive learning roadmaps that turn UX/UI and web-development topics into clear next steps.",
         stack: "Next.js · TypeScript · UX",
-        image: "/images/roadmap-academy.png",
+        image: "/images/roadmap-academy.webp",
         link: "https://roadmapux.netlify.app/"
     },
     {
         name: "PragmaBAT",
         description: "Renovation-company website presenting services, guarantees, and completed interior projects.",
         stack: "HTML · CSS · JavaScript",
-        image: "/images/pragmabat.png",
+        image: "/images/pragmabat-front.webp",
         link: "https://pragmabat.netlify.app/"
     },
     {
         name: "Cocktail Explorer",
         description: "Recipe discovery app for exploring cocktails through a clear search and browsing experience.",
         stack: "Next.js · TypeScript",
-        image: "/images/cocktail.webp",
+        image: "/images/coctailexplorer.webp",
         link: "https://cool-cocktail-app.netlify.app/"
     },
     {
@@ -57,7 +57,7 @@ export default function Projects() {
     };
 
     return (
-        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-16 md:py-24 bg-slate-200">
             <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-semibold text-gray-900">Selected Projects</h2>
@@ -72,7 +72,7 @@ export default function Projects() {
                             className="break-inside-avoid mb-8 md:mb-12"
                         >
                             <div
-                                className="group relative transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-3xl cursor-pointer"
+                                className="group relative cursor-pointer rounded-b-3xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
                                 onDoubleClick={() => handleDoubleClick(project.link)}
                             >
                                 {project.link !== "#" ? (
@@ -81,21 +81,14 @@ export default function Projects() {
                                         target="_blank"
                                         className="block"
                                     >
-                                        <div className="overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-500 relative">
+                                        <div className="relative overflow-hidden rounded-b-3xl bg-white shadow-sm transition-all duration-500">
                                             <div className="relative w-full overflow-hidden bg-gray-100">
-                                                <div className={`relative bg-[#f8f8f8] ${
-                                                    // Vertical images
-                                                    project.name === "Cocktail Explorer" ? 'aspect-[3/4]' :
-                                                        // Wide landscape images
-                                                        index === 0 ? 'aspect-[16/10]' :
-                                                            // Default square-ish ratio
-                                                            'aspect-[4/3]'
-                                                    }`}>
+                                                <div className="relative aspect-[16/10] bg-slate-200">
                                                     <Image
                                                         src={project.image}
                                                         alt={project.name}
                                                         fill
-                                                        className="object-contain transition-all duration-500"
+                                                        className="object-cover object-top transition-all duration-500"
                                                         sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 40vw"
                                                         priority={index < 2}
                                                         loading={index < 2 ? undefined : "lazy"}
@@ -118,21 +111,14 @@ export default function Projects() {
                                         </div>
                                     </Link>
                                 ) : (
-                                    <div className="overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-500 relative">
+                                    <div className="relative overflow-hidden rounded-b-3xl bg-white shadow-sm transition-all duration-500">
                                         <div className="relative w-full overflow-hidden bg-gray-100">
-                                            <div className={`relative bg-[#f8f8f8] ${
-                                                // Vertical images
-                                                project.name === "Cocktail Explorer" ? 'aspect-[3/4]' :
-                                                    // Wide landscape images
-                                                    index === 0 ? 'aspect-[16/10]' :
-                                                        // Default square-ish ratio
-                                                        'aspect-[4/3]'
-                                                }`}>
+                                            <div className="relative aspect-[16/10] bg-[#f8f8f8]">
                                                 <Image
                                                     src={project.image}
                                                     alt={project.name}
                                                     fill
-                                                    className="object-contain transition-all duration-500"
+                                                    className="object-cover object-top transition-all duration-500"
                                                     sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 50vw"
                                                     priority={index < 2}
                                                     loading={index < 2 ? undefined : "lazy"}
@@ -153,7 +139,7 @@ export default function Projects() {
                                         </div>
                                     </div>
                                 )}
-                                <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/[0.08] pointer-events-none"></div>
+                                <div className="pointer-events-none absolute inset-0 rounded-b-3xl ring-1 ring-inset ring-black/[0.08]"></div>
                             </div>
                         </div>
                     ))}

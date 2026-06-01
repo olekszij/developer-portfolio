@@ -3,7 +3,7 @@ import CrumpledNameTag from "./components/CrumpledNameTag";
 
 const AboutMe = () => {
     return (
-        <section className="bg-white px-4 py-8 md:p-12">
+        <section className="bg-white px-4 py-8 md:p-12 rounded">
             <div className="container mx-auto max-w-7xl">
                 <div className="relative flex flex-col md:flex-row justify-center items-center">
                     {/* Photo Column */}
@@ -74,20 +74,47 @@ const AboutMe = () => {
                     </div>
                 </div>
 
-                <div className="mt-14 md:mt-20 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto pb-8">
-                    <div className="border-t border-gray-100 pt-6">
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">About My Work</h2>
-                        <p className="text-lg leading-relaxed text-gray-700">
+                <div className="mx-auto mt-14 grid max-w-5xl gap-4 pb-8 md:mt-20 md:grid-cols-5">
+                    <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6 shadow-sm md:col-span-3 md:p-8">
+                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">
+                            Scope
+                        </p>
+                        <h2 className="mb-4 text-2xl font-semibold tracking-tight text-gray-950 md:text-3xl">
+                            About My Work
+                        </h2>
+                        <p className="text-base leading-7 text-gray-700 md:text-lg">
                             I develop full-stack web projects from responsive frontend screens to REST APIs and data
                             models. My work spans product sites, learning tools, booking flows, and interactive apps.
                         </p>
+
+                        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                            {['Responsive UI', 'REST APIs', 'Data models'].map((item) => (
+                                <div key={item} className="rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-800">
+                                    {item}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    <div className="border-t border-gray-100 pt-6">
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">My Approach</h2>
-                        <p className="text-lg leading-relaxed text-gray-700">
+
+                    <div className="rounded-2xl border border-blue-100 bg-[#eaf6ff] p-6 shadow-sm md:col-span-2 md:p-8">
+                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">
+                            Process
+                        </p>
+                        <h2 className="mb-4 text-2xl font-semibold tracking-tight text-gray-950 md:text-3xl">
+                            My Approach
+                        </h2>
+                        <p className="text-base leading-7 text-gray-700 md:text-lg">
                             UX thinking guides my implementation: I simplify flows, test important behavior with
                             Vitest and Playwright, and troubleshoot details until the experience feels dependable.
                         </p>
+
+                        <div className="mt-6 space-y-3">
+                            {['Clear user flows', 'Practical tests', 'Reliable details'].map((item) => (
+                                <div key={item} className="rounded-xl bg-white/80 px-4 py-3 text-sm font-semibold text-gray-800">
+                                    {item}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

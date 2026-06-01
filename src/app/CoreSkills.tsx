@@ -1,8 +1,8 @@
 'use client';
 
 import { IconType } from 'react-icons';
-import { FaCode, FaDatabase, FaGithub, FaTools, FaVial } from 'react-icons/fa';
-import { SiExpress, SiJavascript, SiMongodb, SiNodedotjs, SiPostgresql, SiTailwindcss, SiTypescript, SiVitest } from 'react-icons/si';
+import { FiCheckCircle, FiCode, FiDatabase, FiTool } from 'react-icons/fi';
+import { SiExpress, SiGit, SiGithub, SiJavascript, SiMongodb, SiNodedotjs, SiPostgresql, SiTailwindcss, SiTypescript, SiVitest } from 'react-icons/si';
 
 const skillGroups: {
     title: string;
@@ -14,8 +14,8 @@ const skillGroups: {
     {
         title: 'Frontend',
         description: 'Building responsive, accessible interfaces with a strong eye for UX.',
-        icon: FaCode,
-        accent: '#2563eb',
+        icon: FiCode,
+        accent: '#1d6fb8',
         skills: [
             { name: 'JavaScript ES6+', icon: SiJavascript },
             { name: 'TypeScript', icon: SiTypescript },
@@ -26,8 +26,8 @@ const skillGroups: {
     {
         title: 'Backend & Data',
         description: 'Designing APIs and working with both SQL and NoSQL data models.',
-        icon: FaDatabase,
-        accent: '#16a34a',
+        icon: FiDatabase,
+        accent: '#1d6fb8',
         skills: [
             { name: 'Node.js', icon: SiNodedotjs },
             { name: 'Express', icon: SiExpress },
@@ -38,67 +38,74 @@ const skillGroups: {
     {
         title: 'Testing',
         description: 'Checking real user flows and keeping projects reliable.',
-        icon: FaVial,
-        accent: '#7c3aed',
+        icon: FiCheckCircle,
+        accent: '#1d6fb8',
         skills: [
             { name: 'Vitest', icon: SiVitest },
-            { name: 'Playwright', icon: FaVial },
+            { name: 'Playwright', icon: FiCheckCircle },
         ],
     },
     {
         title: 'Tools',
         description: 'Working cleanly with code, planning, and debugging.',
-        icon: FaTools,
-        accent: '#dc2626',
+        icon: FiTool,
+        accent: '#1d6fb8',
         skills: [
-            { name: 'Git', icon: FaGithub },
-            { name: 'GitHub', icon: FaGithub },
+            { name: 'Git', icon: SiGit },
+            { name: 'GitHub', icon: SiGithub },
         ],
     },
 ];
 
 export default function CoreSkills() {
     return (
-        <section className="py-16 md:py-24 bg-white">
+        <section className="bg-white py-14 md:py-20">
             <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4 tracking-tight">Core Skills</h2>
-                    <p className="text-gray-900 text-lg max-w-2xl mx-auto">
+                <div className="mb-10 text-center md:mb-12">
+                    <h2 className="mb-4 text-4xl font-semibold tracking-tight text-gray-950 md:text-5xl">Core Skills</h2>
+                    <p className="mx-auto max-w-2xl text-lg text-gray-600">
                         A practical snapshot of the skills I use to build, test, and support modern web applications.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
                     {skillGroups.map((group) => {
                         const GroupIcon = group.icon;
 
                         return (
                             <article
                                 key={group.title}
-                                className="rounded-2xl border border-gray-100 bg-gray-50/70 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)]"
+                                className="flex min-h-[320px] flex-col rounded-2xl border border-sky-100 bg-[#eaf6ff] p-6 shadow-sm md:p-7"
                             >
-                                <div className="flex items-center gap-4 mb-5">
+                                <div className="mb-5 flex items-start justify-between gap-4">
+                                    <div>
+                                        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-sky-700/70">
+                                            {group.title === 'Backend & Data' ? 'Backend' : group.title}
+                                        </p>
+                                        <h3 className="text-2xl font-semibold leading-tight tracking-tight text-gray-950">
+                                            {group.title}
+                                        </h3>
+                                    </div>
                                     <div
-                                        className="w-12 h-12 rounded-xl flex items-center justify-center bg-white border border-gray-100"
+                                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-sky-700"
                                         style={{ color: group.accent }}
                                     >
-                                        <GroupIcon size={24} />
+                                        <GroupIcon size={21} />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900">{group.title}</h3>
                                 </div>
 
-                                <p className="text-gray-600 leading-relaxed mb-6 min-h-[78px]">
+                                <p className="mb-6 text-base leading-7 text-gray-700">
                                     {group.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2">
+                                <div className="mt-auto flex flex-wrap gap-2">
                                     {group.skills.map((skill) => {
                                         const SkillIcon = skill.icon;
 
                                         return (
                                             <span
                                                 key={skill.name}
-                                                className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-sm font-medium text-gray-800 border border-gray-100"
+                                                className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-sm font-medium text-gray-800"
                                             >
                                                 {SkillIcon && <SkillIcon size={15} style={{ color: group.accent }} />}
                                                 {skill.name}

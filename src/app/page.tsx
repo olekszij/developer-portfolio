@@ -6,7 +6,7 @@ import Contact from "./contact/page";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-200">
       <div className="container mx-auto md:px-20 lg:px-40 xl:px-52 pt-24">
         <div id="about-me" className="scroll-mt-28 py-8 md:py-12">
           <AboutMe />
