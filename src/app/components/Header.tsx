@@ -17,7 +17,7 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-white text-black py-6 z-[9999] border-b border-gray-100">
+        <header className="fixed top-0 left-0 w-full bg-slate-200 py-6 text-black z-[9999]">
             <div className="container mx-auto px-4 md:px-20 lg:px-40 xl:px-52">
                 <div className="flex items-center justify-between">
                     <Link

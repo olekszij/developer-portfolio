@@ -1,40 +1,10 @@
-import Image from "next/image";
 import CrumpledNameTag from "./components/CrumpledNameTag";
 
 const AboutMe = () => {
     return (
-        <section className="bg-white px-4 py-8 md:p-12 rounded">
+        <section className="rounded bg-slate-200 px-4 py-8 md:p-12">
             <div className="container mx-auto max-w-7xl">
-                <div className="relative flex flex-col md:flex-row justify-center items-center">
-                    {/* Photo Column */}
-                    <div className="relative z-0 -mb-8 md:mb-0 md:-mr-16">
-                        <div className="relative group">
-                            <div className="absolute inset-0 rounded-xl bg-gray-400/20 transform translate-x-2 translate-y-2 blur-sm"></div>
-                            <div className="relative w-[248px] h-[248px] sm:w-[300px] sm:h-[300px] transform group-hover:scale-[1.02] transition-transform duration-300">
-                                <div className="absolute inset-0 rounded-xl bg-white shadow-[inset_1px_1px_3px_rgba(0,0,0,0.2)]"></div>
-                                <div className="absolute -inset-3 rounded-xl bg-white/90 shadow-lg"></div>
-                                <Image
-                                    src="/images/notmyface.webp"
-                                    alt="Olek K"
-                                    fill
-                                    className="rounded-xl object-cover"
-                                    style={{
-                                        boxShadow: `
-                                            2px 2px 5px rgba(0,0,0,0.1),
-                                            -1px -1px 3px rgba(255,255,255,0.25) inset,
-                                            0 0 0 12px white
-                                        `
-                                    }}
-                                    priority
-                                    fetchPriority="high"
-                                    quality={90}
-                                    sizes="(max-width: 768px) 300px, 400px"
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Name Badge Column */}
+                <div className="relative flex justify-center items-center">
                     <div className="relative z-10 transform hover:rotate-2 transition-transform duration-300">
                         <CrumpledNameTag />
                     </div>
@@ -87,9 +57,9 @@ const AboutMe = () => {
                             models. My work spans product sites, learning tools, booking flows, and interactive apps.
                         </p>
 
-                        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                        <div className="mt-5 flex flex-wrap gap-2">
                             {['Responsive UI', 'REST APIs', 'Data models'].map((item) => (
-                                <div key={item} className="rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-800">
+                                <div key={item} className="rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-gray-800">
                                     {item}
                                 </div>
                             ))}
@@ -108,9 +78,9 @@ const AboutMe = () => {
                             Vitest and Playwright, and troubleshoot details until the experience feels dependable.
                         </p>
 
-                        <div className="mt-6 space-y-3">
+                        <div className="mt-5 flex flex-wrap gap-2">
                             {['Clear user flows', 'Practical tests', 'Reliable details'].map((item) => (
-                                <div key={item} className="rounded-xl bg-white/80 px-4 py-3 text-sm font-semibold text-gray-800">
+                                <div key={item} className="rounded-lg bg-white/80 px-3 py-1.5 text-xs font-semibold text-gray-800">
                                     {item}
                                 </div>
                             ))}

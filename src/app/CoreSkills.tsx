@@ -1,8 +1,8 @@
 'use client';
 
 import { IconType } from 'react-icons';
-import { FiCheckCircle, FiCode, FiDatabase, FiTool } from 'react-icons/fi';
-import { SiExpress, SiGit, SiGithub, SiJavascript, SiMongodb, SiNodedotjs, SiPostgresql, SiTailwindcss, SiTypescript, SiVitest } from 'react-icons/si';
+import { FiCheckCircle, FiCode, FiDatabase, FiTerminal, FiTool } from 'react-icons/fi';
+import { SiExpress, SiGit, SiGithub, SiJavascript, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTailwindcss, SiTypescript, SiVitest } from 'react-icons/si';
 
 const skillGroups: {
     title: string;
@@ -17,6 +17,8 @@ const skillGroups: {
         icon: FiCode,
         accent: '#1d6fb8',
         skills: [
+            { name: 'React', icon: SiReact },
+            { name: 'Next.js', icon: SiNextdotjs },
             { name: 'JavaScript ES6+', icon: SiJavascript },
             { name: 'TypeScript', icon: SiTypescript },
             { name: 'HTML5 / CSS3' },
@@ -53,6 +55,7 @@ const skillGroups: {
         skills: [
             { name: 'Git', icon: SiGit },
             { name: 'GitHub', icon: SiGithub },
+            { name: 'Command Line', icon: FiTerminal },
         ],
     },
 ];
