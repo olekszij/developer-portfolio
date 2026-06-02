@@ -41,6 +41,13 @@ const projects = [
         link: "https://tmdb-quiz.vercel.app/"
     },
     {
+        name: "Level Up!",
+        description: "Interactive IT quiz application built as a Progressive Web App.",
+        stack: "React · Tailwind CSS",
+        image: "/images/levelup.webp",
+        link: "https://it-quiz-pwa.netlify.app/"
+    },
+    {
         name: "Paris Design Patrimoine",
         description: "A polished construction-company site shaped around services, trust, and easy client contact.",
         stack: "Next.js · Tailwind CSS",
