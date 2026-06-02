@@ -15,7 +15,7 @@ const projects = [
     {
         name: "Roadmap Academy",
         description: "Interactive learning roadmaps that turn UX/UI and web-development topics into clear next steps.",
-        stack: "Next.js · TypeScript · UX",
+        stack: "React · TypeScript · PostgreSQL",
         image: "/images/roadmap-academy.webp",
         link: "https://roadmapux.netlify.app/"
     },
@@ -50,8 +50,8 @@ const projects = [
     {
         name: "Paris Design Patrimoine",
         description: "A polished construction-company site shaped around services, trust, and easy client contact.",
-        stack: "Next.js · Tailwind CSS",
-        image: "/images/parisdesignpatrimoine.webp",
+        stack: "HTML · CSS · JavaScript",
+        image: "/images/patrimoine.webp",
         link: "https://parisdesignpatrimoine.netlify.app/"
     },
 ];
