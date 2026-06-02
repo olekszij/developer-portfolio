@@ -37,7 +37,7 @@ const projects = [
         name: "Guess the Movie",
         description: "Interactive movie quiz that turns TMDB content into a quick visual guessing game.",
         stack: "Next.js · TypeScript",
-        image: "/images/project8.jpg",
+        image: "/images/guess-the-movie.webp",
         link: "https://tmdb-quiz.vercel.app/"
     },
     {
