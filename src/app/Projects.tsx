@@ -55,6 +55,13 @@ const projects = [
         image: "/images/patrimoine.webp",
         link: "https://parisdesignpatrimoine.netlify.app/"
     },
+    {
+        name: "Challenge Board",
+        description: "Productivity suite application to manage challenges, tasks, and track personal progress.",
+        stack: "React · TypeScript",
+        image: "/images/challengeBoard.webp",
+        link: "https://challengebo.netlify.app/"
+    }
 ];
 
 const categories = ["All", "React", "Next.js", "Vanilla JS"];
