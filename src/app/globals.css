@@ -15,8 +15,9 @@ html, body {
   padding: 0;
 }
 
-h1, h2, h3 {
-  font-weight: 800;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
 }
 
 p {
@@ -27,7 +28,7 @@ p {
 .cv-editorial-shell {
   background: #ffffff;
   color: #0f0e0c;
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: "Inter", sans-serif;
   position: relative;
 }
 
@@ -72,17 +73,17 @@ p {
   color: #0f0e0c;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: clamp(2.45rem, 6vw, 4.2rem);
-  font-weight: 700;
-  letter-spacing: 0;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   line-height: 1.03;
   margin: 0 0 0.45rem;
 }
 
 .cv-editorial-title {
   color: #8a8680;
-  font-family: "Iowan Old Style", "Baskerville", Georgia, serif;
+  font-family: "Inter", sans-serif;
   font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-  font-style: italic;
+  font-weight: 500;
   margin: 0 0 1.4rem;
 }
 
@@ -276,9 +277,10 @@ p {
 }
 
 .cv-editorial-experience-head h3 {
-  font-family: "Iowan Old Style", "Baskerville", Georgia, serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.08rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .cv-editorial-experience-head p {

@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { GeistMono } from "geist/font";
-import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import "../globals.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { getDictionary } from "../../dictionaries";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
   variable: "--font-inter",
   preload: true,
@@ -32,20 +33,31 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'fr' }];
+}
+
+export default async function RootLayout({
+  children,
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}>) {
+  const { lang } = await params;
+  const dict = getDictionary(lang);
+  
   const classNames = [inter.variable, GeistMono.variable, "antialiased"]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className={classNames}>
-        <Header />
+        <Header lang={lang} dict={dict.header} />
         <main>{children}</main>
         <Footer />
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

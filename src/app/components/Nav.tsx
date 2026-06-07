@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-const Nav = () => {
+const Nav = ({ lang, dict }: { lang: string, dict: any }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     // Блокируем скролл при открытом меню
@@ -36,14 +36,14 @@ const Nav = () => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative flex items-center h-full">
             {/* Hamburger button */}
             <button
                 aria-label="Toggle navigation menu"
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden text-2xl"
+                className="md:hidden flex items-center justify-center"
             >
-                <div className="relative">
+                <div className="flex items-center justify-center">
                     {isOpen ?
                         <FaTimes size={28} style={{ fill: 'black' }} /> :
                         <FaBars size={28} style={{ fill: 'black' }} />
@@ -54,71 +54,80 @@ const Nav = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-12">
                 <Link
-                    href="/#about-me"
+                    href={`/${lang}/#about-me`}
                     onClick={(e) => scrollToSection('about-me', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
-                    About Me
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                    className="text-lg font-bold text-black transition-all duration-300 relative group py-1">
+                    {dict?.aboutMe || "About Me"}
+                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
                 </Link>
                 <Link
-                    href="/#skills"
+                    href={`/${lang}/#skills`}
                     onClick={(e) => scrollToSection('skills', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
-                    Skills
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full"></span>
+                    className="text-lg font-bold text-black transition-all duration-300 relative group py-1">
+                    {dict?.skills || "Skills"}
+                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
                 </Link>
                 <Link
-                    href="/#projects"
+                    href={`/${lang}/#projects`}
                     onClick={(e) => scrollToSection('projects', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
-                    Projects
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
+                    className="text-lg font-bold text-black transition-all duration-300 relative group py-1">
+                    {dict?.projects || "Projects"}
+                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
                 </Link>
                 <Link
-                    href="/#contact"
+                    href={`/${lang}/#contact`}
                     onClick={(e) => scrollToSection('contact', e)}
-                    className="text-base font-medium text-black transition-all duration-300 relative group">
-                    Contact
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                    className="text-lg font-bold text-black transition-all duration-300 relative group py-1">
+                    {dict?.contact || "Contact"}
+                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-black transition-all duration-300 group-hover:w-full"></span>
                 </Link>
             </nav>
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <nav className="fixed inset-0 bg-white z-50 md:hidden">
-                    <div className="absolute top-6 right-6">
+                <nav className="fixed top-0 left-0 w-screen h-[100dvh] bg-[#F5F4EF] z-50 md:hidden flex flex-col overflow-y-auto">
+                    {/* Top Header */}
+                    <div className="flex justify-end items-center px-6 py-6">
                         <button
                             aria-label="Close navigation menu"
                             onClick={() => setIsOpen(false)}
-                            className="text-2xl"
+                            className="text-black hover:opacity-70 transition-opacity"
                         >
-                            <FaTimes size={28} style={{ fill: 'black' }} />
+                            <FaTimes size={32} />
                         </button>
                     </div>
-                    <div className="flex flex-col items-center justify-center h-full space-y-12">
+
+                    {/* Navigation Links */}
+                    <div className="flex flex-1 flex-col items-center justify-center space-y-8 px-4 pb-20">
                         <Link
-                            href="/#about-me"
+                            href={`/${lang}/#about-me`}
                             onClick={(e) => scrollToSection('about-me', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
-                            About Me
+                            className="text-4xl font-extrabold text-black tracking-tight hover:opacity-70 transition-opacity">
+                            {dict?.aboutMe || "About Me"}
                         </Link>
                         <Link
-                            href="/#skills"
+                            href={`/${lang}/#skills`}
                             onClick={(e) => scrollToSection('skills', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
-                            Skills
+                            className="text-4xl font-extrabold text-black tracking-tight hover:opacity-70 transition-opacity">
+                            {dict?.skills || "Skills"}
                         </Link>
                         <Link
-                            href="/#projects"
+                            href={`/${lang}/#projects`}
                             onClick={(e) => scrollToSection('projects', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
-                            Projects
+                            className="text-4xl font-extrabold text-black tracking-tight hover:opacity-70 transition-opacity">
+                            {dict?.projects || "Projects"}
                         </Link>
                         <Link
-                            href="/#contact"
+                            href={`/${lang}/#contact`}
                             onClick={(e) => scrollToSection('contact', e)}
-                            className="text-2xl font-medium text-black transition-all duration-300">
-                            Contact
+                            className="text-4xl font-extrabold text-black tracking-tight hover:opacity-70 transition-opacity">
+                            {dict?.contact || "Contact"}
+                        </Link>
+                        <Link
+                            href={`/${lang}/cv`}
+                            onClick={() => setIsOpen(false)}
+                            className="text-4xl font-extrabold text-black tracking-tight hover:opacity-70 transition-opacity">
+                            {dict?.cv || "View CV"}
                         </Link>
                     </div>
                 </nav>

@@ -31,21 +31,23 @@ const TechCard = ({ icon: Icon, name, color, description }: { icon: IconType, na
     );
 };
 
-const TechnologiesList = () => {
-    const technologies = [
-        { icon: FaJs, name: "JavaScript", color: '#F7DF1E', description: "Core language for web development, used in all my projects. Experienced in ES6+, asynchronous programming, and DOM manipulation." },
-        { icon: SiTypescript, name: "TypeScript", color: '#3178C6', description: "Type-safe JavaScript, ensuring code quality and scalability in complex applications. Proficient in interfaces, types, and generics." },
-        { icon: FaReact, name: "React", color: '#61DBFB', description: "Building interactive UIs with a component-based architecture. Expert in hooks, context API, and performance optimization." },
-        { icon: SiNextdotjs, name: "Next.js", color: '#000000', description: "Full-stack React framework optimized for performance and SEO. Experienced in SSR, ISR, and file-based routing." },
-        { icon: SiVite, name: "Vite", color: '#646CFF', description: "Ultrafast build tool for modern web projects. Leverages native ES modules for lightning-fast HMR and development." },
-        { icon: SiTailwindcss, name: "Tailwind CSS", color: '#38B2AC', description: "Utility-first CSS framework for rapid UI development. Skilled in responsive design and creating custom design systems." },
-        { icon: FaNodeJs, name: "Node.js", color: '#68A063', description: "Server-side JavaScript environment. Building scalable network applications and RESTful backend architectures." },
-        { icon: SiExpress, name: "Express.js", color: '#000000', description: "Fast, unopinionated, minimalist web framework for Node.js. Used for building robust APIs and server-side logic." },
-        { icon: SiMongodb, name: "MongoDB", color: '#47A248', description: "NoSQL document database. Proficient in schema design, aggregation pipelines, and data modeling for flexibility." },
-        { icon: FaGitAlt, name: "Git", color: '#F05032', description: "Distributed version control system. Expert in branching strategies, merge conflict resolution, and collaborative workflows." },
-        { icon: SiVercel, name: "Vercel", color: '#000000', description: "Deployment and collaboration platform for frontend developers. Optimized for Next.js with instant deployments and scaling." },
-        { icon: SiNetlify, name: "Netlify", color: '#38A169', description: "All-in-one platform for automating modern web projects. Experienced in CI/CD, form handling, and serverless functions." },
+const getTechnologies = (dict: any) => [
+        { icon: FaJs, name: "JavaScript", color: '#F7DF1E', description: dict?.items?.js || "Core language for web development, used in all my projects. Experienced in ES6+, asynchronous programming, and DOM manipulation." },
+        { icon: SiTypescript, name: "TypeScript", color: '#3178C6', description: dict?.items?.ts || "Type-safe JavaScript, ensuring code quality and scalability in complex applications. Proficient in interfaces, types, and generics." },
+        { icon: FaReact, name: "React", color: '#61DBFB', description: dict?.items?.react || "Building interactive UIs with a component-based architecture. Expert in hooks, context API, and performance optimization." },
+        { icon: SiNextdotjs, name: "Next.js", color: '#000000', description: dict?.items?.next || "Full-stack React framework optimized for performance and SEO. Experienced in SSR, ISR, and file-based routing." },
+        { icon: SiVite, name: "Vite", color: '#646CFF', description: dict?.items?.vite || "Ultrafast build tool for modern web projects. Leverages native ES modules for lightning-fast HMR and development." },
+        { icon: SiTailwindcss, name: "Tailwind CSS", color: '#38B2AC', description: dict?.items?.tailwind || "Utility-first CSS framework for rapid UI development. Skilled in responsive design and creating custom design systems." },
+        { icon: FaNodeJs, name: "Node.js", color: '#68A063', description: dict?.items?.node || "Server-side JavaScript environment. Building scalable network applications and RESTful backend architectures." },
+        { icon: SiExpress, name: "Express.js", color: '#000000', description: dict?.items?.express || "Fast, unopinionated, minimalist web framework for Node.js. Used for building robust APIs and server-side logic." },
+        { icon: SiMongodb, name: "MongoDB", color: '#47A248', description: dict?.items?.mongo || "NoSQL document database. Proficient in schema design, aggregation pipelines, and data modeling for flexibility." },
+        { icon: FaGitAlt, name: "Git", color: '#F05032', description: dict?.items?.git || "Distributed version control system. Expert in branching strategies, merge conflict resolution, and collaborative workflows." },
+        { icon: SiVercel, name: "Vercel", color: '#000000', description: dict?.items?.vercel || "Deployment and collaboration platform for frontend developers. Optimized for Next.js with instant deployments and scaling." },
+        { icon: SiNetlify, name: "Netlify", color: '#38A169', description: dict?.items?.netlify || "All-in-one platform for automating modern web projects. Experienced in CI/CD, form handling, and serverless functions." },
     ];
+
+const TechnologiesList = ({ dict }: { dict?: any }) => {
+    const technologies = getTechnologies(dict);
 
     const containerRef = useRef<HTMLDivElement>(null);
     const [constraints, setConstraints] = useState({ left: 0, right: 0 });
@@ -98,9 +100,9 @@ const TechnologiesList = () => {
         >
             <div className="max-w-[1920px] mx-auto">
                 <div className="px-4 sm:px-6 lg:px-8 mb-16 text-center">
-                    <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4 italic tracking-tight">Technologies & Tools</h2>
+                    <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4 italic tracking-tight">{dict?.title || "Technologies & Tools"}</h2>
                     <p className="text-gray-500 text-lg max-w-2xl mx-auto font-light">
-                        A curated selection of the tools and frameworks I use to bring ideas to life.
+                        {dict?.subtitle || "A curated selection of the tools and frameworks I use to bring ideas to life."}
                     </p>
                 </div>
 

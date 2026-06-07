@@ -1,0 +1,164 @@
+{
+  "header": {
+    "aboutMe": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "technologies": "Technologies",
+    "contact": "Contact",
+    "cv": "Voir le CV"
+  },
+  "aboutMe": {
+    "title": "Développeur web Full-Stack",
+    "heading": "Des produits React avec une forte attention à l'UX.",
+    "description": "Je crée des applications web modernes avec React, Next.js, TypeScript, Node.js et des tests concrets. Je me soucie des parcours utilisateurs clairs, des API fiables et des interfaces faciles à comprendre.",
+    "projects": "Projets",
+    "contact": "Contact",
+    "resume": "CV",
+    "scope": "Portée",
+    "aboutWork": "À propos de mon travail",
+    "aboutWorkDesc": "Je développe des projets web full-stack, des interfaces frontend réactives aux API REST et modèles de données. Mon travail couvre les sites vitrines, les outils d'apprentissage, les flux de réservation et les applications interactives.",
+    "scopeTags": ["UI Réactive", "API REST", "Modèles de données"],
+    "process": "Processus",
+    "myApproach": "Mon approche",
+    "approachDesc": "La réflexion UX guide mon implémentation : je simplifie les parcours, je teste les comportements importants avec Vitest et Playwright, et je peaufine les détails jusqu'à ce que l'expérience soit fiable.",
+    "processTags": ["Parcours clairs", "Tests pratiques", "Détails fiables"]
+  },
+  "coreSkills": {
+    "title": "Compétences Clés",
+    "subtitle": "Un aperçu pratique des compétences que j'utilise pour créer, tester et maintenir des applications web modernes.",
+    "frontend": "Frontend",
+    "frontendDesc": "Création d'interfaces réactives et accessibles avec un fort attrait pour l'UX.",
+    "backend": "Backend & Données",
+    "backendDesc": "Conception d'API et gestion de modèles de données SQL et NoSQL.",
+    "testing": "Tests",
+    "testingDesc": "Vérification des parcours utilisateurs réels et maintien de la fiabilité des projets.",
+    "tools": "Outils",
+    "toolsDesc": "Travail structuré avec le code, la planification et le débogage."
+  },
+  "projects": {
+    "title": "Projets Sélectionnés",
+    "subtitle": "Quelques projets qui montrent comment je combine la réflexion produit, le savoir-faire frontend et la livraison full-stack.",
+    "categories": ["Tout", "React", "Next.js", "Vanilla JS"],
+    "items": [
+      {
+        "name": "Perfect Cab",
+        "description": "Expérience client pour un service de VTC axée sur la réservation en ligne et une présence professionnelle.",
+        "stack": "React · TypeScript · PostgreSQL · UX/UI · Recherche UX · SEO"
+      },
+      {
+        "name": "Roadmap Academy",
+        "description": "Feuilles de route d'apprentissage interactives qui transforment les sujets UX/UI et développement web en étapes claires.",
+        "stack": "React · TypeScript · PostgreSQL"
+      },
+      {
+        "name": "PragmaBAT",
+        "description": "Site web d'entreprise de rénovation présentant les services, garanties et projets d'intérieur réalisés.",
+        "stack": "HTML · CSS · JavaScript"
+      },
+      {
+        "name": "Cocktail Explorer",
+        "description": "Application de découverte de recettes pour explorer des cocktails via une recherche et une navigation claires.",
+        "stack": "Next.js · TypeScript"
+      },
+      {
+        "name": "Guess the Movie",
+        "description": "Quiz de film interactif qui transforme le contenu TMDB en un jeu de devinette visuel rapide.",
+        "stack": "Next.js · TypeScript"
+      },
+      {
+        "name": "Level Up!",
+        "description": "Application interactive de quiz IT construite en tant que Progressive Web App (PWA).",
+        "stack": "React · Tailwind CSS"
+      },
+      {
+        "name": "Paris Design Patrimoine",
+        "description": "Un site d'entreprise de construction soigné, axé sur les services, la confiance et la facilité de contact.",
+        "stack": "HTML · CSS · JavaScript"
+      },
+      {
+        "name": "Challenge Board",
+        "description": "Application de productivité pour gérer les défis, les tâches et suivre les progrès personnels.",
+        "stack": "React · TypeScript"
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Technologies et Outils",
+    "subtitle": "Une sélection soignée des outils et frameworks que j'utilise pour donner vie aux idées.",
+    "items": {
+      "js": "Langage de base pour le développement web, utilisé dans tous mes projets. Expérience en ES6+, programmation asynchrone et manipulation du DOM.",
+      "ts": "JavaScript fortement typé, assurant la qualité et la scalabilité du code. Maîtrise des interfaces, types et génériques.",
+      "react": "Création d'interfaces utilisateur interactives avec une architecture orientée composants. Expert en hooks, Context API et optimisation.",
+      "next": "Framework React full-stack optimisé pour les performances et le SEO. Expérience en SSR, ISR et routage basé sur les fichiers.",
+      "vite": "Outil de build ultra-rapide pour les projets web modernes. Utilise les modules ES natifs pour un HMR fulgurant.",
+      "tailwind": "Framework CSS utilitaire pour un développement UI rapide. Compétences en design responsive et création de systèmes de conception.",
+      "node": "Environnement JavaScript côté serveur. Création d'applications réseau scalables et d'architectures backend RESTful.",
+      "express": "Framework web rapide, minimaliste et sans opinion pour Node.js. Utilisé pour créer des API robustes.",
+      "mongo": "Base de données documentaire NoSQL. Maîtrise de la conception de schémas, pipelines d'agrégation et flexibilité des données.",
+      "git": "Système de contrôle de version décentralisé. Expert en stratégies de branchement, résolution de conflits et flux collaboratifs.",
+      "vercel": "Plateforme de déploiement pour les développeurs frontend. Optimisé pour Next.js avec des déploiements instantanés.",
+      "netlify": "Plateforme tout-en-un pour l'automatisation des projets web. Expérience en CI/CD, gestion de formulaires et fonctions serverless."
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Ouvert aux offres de développement web et aux projets orientés produit. Contactez-moi ici ou sur :",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "Voir le CV",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "success": "Merci pour votre message ! Je vous répondrai bientôt.",
+      "error": "Une erreur s'est produite lors de l'envoi. Veuillez réessayer."
+    }
+  },
+  "cv": {
+    "back": "Retour au Portfolio",
+    "download": "Télécharger PDF",
+    "role": "Développeur Full-Stack",
+    "location": "Paris, France",
+    "skills": {
+      "title": "Compétences",
+      "frontend": "Frontend",
+      "backend": "Backend & Données",
+      "tooling": "Outils & Méthodes"
+    },
+    "languages": {
+      "title": "Langues",
+      "french": "Français",
+      "frenchLevel": "Courant",
+      "english": "Anglais",
+      "englishLevel": "B1",
+      "belarusian": "Biélorusse",
+      "belarusianLevel": "Langue maternelle"
+    },
+    "education": {
+      "title": "Éducation",
+      "expected": "Prévu",
+      "ux": "Google Ateliers Numériques",
+      "fullstack": "Bootcamp Le Reacteur",
+      "integrator": "CFAS Institut"
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Développeur full-stack orienté produit, concentré sur la création d'applications React et Next.js réactives, les API Node.js/TypeScript, les bases de données SQL/NoSQL et les interfaces UX-friendly. Mon expérience précédente en gestion de projet et en support informatique renforce ma rigueur, mon débogage et ma communication au sein des équipes."
+    },
+    "devExp": {
+      "title": "Expérience en Développement",
+      "intern": "Développeur Full-Stack (Stage)",
+      "freelance": "Intégrateur Web / Création & Support Web",
+      "months": "mois",
+      "years": "ans combinés"
+    },
+    "prevExp": {
+      "title": "Expérience Précédente Pertinente",
+      "pm": "Chef de Projet IT",
+      "tech": "Technicien Support IT",
+      "pm2": "Chef de Projet",
+      "intern": "Stagiaire"
+    }
+  }
+}

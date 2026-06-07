@@ -5,69 +5,79 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BiLinkExternal } from 'react-icons/bi';
 
-const projects = [
-    {
-        name: "Perfect Cab",
-        description: "Customer-facing cab service experience with booking-oriented pages and a real business presence.",
-        stack: "React · TypeScript · PostgreSQL · UX/UI · UX Research · SEO",
-        image: "/images/perfect-cab.webp",
-        link: "https://perfectcab.fr/fr/"
-    },
-    {
-        name: "Roadmap Academy",
-        description: "Interactive learning roadmaps that turn UX/UI and web-development topics into clear next steps.",
-        stack: "React · TypeScript · PostgreSQL",
-        image: "/images/roadmap-academy.webp",
-        link: "https://roadmapux.netlify.app/"
-    },
-    {
-        name: "PragmaBAT",
-        description: "Renovation-company website presenting services, guarantees, and completed interior projects.",
-        stack: "HTML · CSS · JavaScript",
-        image: "/images/pragmabat-front.webp",
-        link: "https://pragmabat.netlify.app/"
-    },
-    {
-        name: "Cocktail Explorer",
-        description: "Recipe discovery app for exploring cocktails through a clear search and browsing experience.",
-        stack: "Next.js · TypeScript",
-        image: "/images/coctailexplorer.webp",
-        link: "https://cool-cocktail-app.netlify.app/"
-    },
-    {
-        name: "Guess the Movie",
-        description: "Interactive movie quiz that turns TMDB content into a quick visual guessing game.",
-        stack: "Next.js · TypeScript",
-        image: "/images/guess.webp",
-        link: "https://tmdb-quiz.vercel.app/"
-    },
-    {
-        name: "Level Up!",
-        description: "Interactive IT quiz application built as a Progressive Web App.",
-        stack: "React · Tailwind CSS",
-        image: "/images/levelup.webp",
-        link: "https://it-quiz-pwa.netlify.app/"
-    },
-    {
-        name: "Paris Design Patrimoine",
-        description: "A polished construction-company site shaped around services, trust, and easy client contact.",
-        stack: "HTML · CSS · JavaScript",
-        image: "/images/patrimoine.webp",
-        link: "https://parisdesignpatrimoine.netlify.app/"
-    },
-    {
-        name: "Challenge Board",
-        description: "Productivity suite application to manage challenges, tasks, and track personal progress.",
-        stack: "React · TypeScript",
-        image: "/images/challengeBoard.webp",
-        link: "https://challengebo.netlify.app/"
-    }
-];
+const getProjects = (dict: any) => {
+    const items = dict?.items || [
+        {
+            name: "Perfect Cab",
+            description: "Customer-facing cab service experience with booking-oriented pages and a real business presence.",
+            stack: "React · TypeScript · PostgreSQL · UX/UI · UX Research · SEO"
+        },
+        {
+            name: "Roadmap Academy",
+            description: "Interactive learning roadmaps that turn UX/UI and web-development topics into clear next steps.",
+            stack: "React · TypeScript · PostgreSQL"
+        },
+        {
+            name: "PragmaBAT",
+            description: "Renovation-company website presenting services, guarantees, and completed interior projects.",
+            stack: "HTML · CSS · JavaScript"
+        },
+        {
+            name: "Cocktail Explorer",
+            description: "Recipe discovery app for exploring cocktails through a clear search and browsing experience.",
+            stack: "Next.js · TypeScript"
+        },
+        {
+            name: "Guess the Movie",
+            description: "Interactive movie quiz that turns TMDB content into a quick visual guessing game.",
+            stack: "Next.js · TypeScript"
+        },
+        {
+            name: "Level Up!",
+            description: "Interactive IT quiz application built as a Progressive Web App.",
+            stack: "React · Tailwind CSS"
+        },
+        {
+            name: "Paris Design Patrimoine",
+            description: "A polished construction-company site shaped around services, trust, and easy client contact.",
+            stack: "HTML · CSS · JavaScript"
+        },
+        {
+            name: "Challenge Board",
+            description: "Productivity suite application to manage challenges, tasks, and track personal progress.",
+            stack: "React · TypeScript"
+        }
+    ];
 
-const categories = ["All", "React", "Next.js", "Vanilla JS"];
+    return items.map((item: any, i: number) => ({
+        ...item,
+        image: [
+            "/images/perfect-cab.webp",
+            "/images/roadmap-academy.webp",
+            "/images/pragmabat-front.webp",
+            "/images/coctailexplorer.webp",
+            "/images/guess.webp",
+            "/images/levelup.webp",
+            "/images/patrimoine.webp",
+            "/images/challengeBoard.webp"
+        ][i],
+        link: [
+            "https://perfectcab.fr/fr/",
+            "https://roadmapux.netlify.app/",
+            "https://pragmabat.netlify.app/",
+            "https://cool-cocktail-app.netlify.app/",
+            "https://tmdb-quiz.vercel.app/",
+            "https://it-quiz-pwa.netlify.app/",
+            "https://parisdesignpatrimoine.netlify.app/",
+            "https://challengebo.netlify.app/"
+        ][i]
+    }));
+};
 
-export default function Projects() {
-    const [activeCategory, setActiveCategory] = useState("All");
+export default function Projects({ dict, lang }: { dict?: any, lang?: string }) {
+    const projects = getProjects(dict);
+    const categories = dict?.categories || ["All", "React", "Next.js", "Vanilla JS"];
+    const [activeCategory, setActiveCategory] = useState(categories[0]);
 
     const handleDoubleClick = (link: string) => {
         if (link !== "#") {
@@ -75,24 +85,28 @@ export default function Projects() {
         }
     };
 
-    const filteredProjects = projects.filter(project => {
-        if (activeCategory === "All") return true;
-        if (activeCategory === "React") return project.stack.includes("React");
-        if (activeCategory === "Next.js") return project.stack.includes("Next.js");
-        if (activeCategory === "Vanilla JS") return project.stack.includes("HTML");
+    const filteredProjects = projects.filter((project: any) => {
+        if (activeCategory === categories[0]) return true;
+        if (activeCategory === categories[1]) return project.stack.includes("React");
+        if (activeCategory === categories[2]) return project.stack.includes("Next.js");
+        if (activeCategory === categories[3]) return project.stack.includes("HTML");
         return true;
     });
 
     return (
-        <section className="py-16 md:py-24 bg-slate-200">
-            <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative overflow-hidden w-full bg-sky-50 py-16 md:py-24">
+            {/* Ambient Background Blobs */}
+            <div className="pointer-events-none absolute left-10 top-0 h-[600px] w-[600px] rounded-full bg-cyan-200/40 blur-[100px]"></div>
+            <div className="pointer-events-none absolute -right-10 bottom-20 h-[700px] w-[700px] rounded-full bg-blue-200/40 blur-[120px]"></div>
+            
+            <div className="relative z-10 max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-semibold text-gray-900">Selected Projects</h2>
+                    <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-950 md:text-5xl lg:text-6xl drop-shadow-sm">{dict?.title || "Selected Projects"}</h2>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                        A few projects that show how I combine product thinking, frontend craft, and full-stack delivery.
+                        {dict?.subtitle || "A few projects that show how I combine product thinking, frontend craft, and full-stack delivery."}
                     </p>
                     <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-10">
-                        {categories.map((category) => (
+                        {categories.map((category: string) => (
                             <button
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
@@ -107,10 +121,10 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full">
-                    {filteredProjects.map((project, index) => (
+                    {filteredProjects.map((project: any, index: number) => (
                         <div
                             key={index}
-                            className="group relative cursor-pointer rounded-b-3xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] h-full flex flex-col"
+                            className="group relative cursor-pointer rounded-[2rem] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col"
                             onDoubleClick={() => handleDoubleClick(project.link)}
                         >
                             {project.link !== "#" ? (
@@ -119,7 +133,7 @@ export default function Projects() {
                                     target="_blank"
                                     className="block h-full"
                                 >
-                                    <div className="relative overflow-hidden rounded-b-3xl bg-white shadow-sm transition-all duration-500 h-full flex flex-col">
+                                    <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] backdrop-blur-2xl transition-all duration-500 h-full flex flex-col hover:bg-white/50 hover:border-white/80">
                                         <div className="relative w-full overflow-hidden bg-gray-100 shrink-0">
                                             <div className="relative aspect-[16/10] bg-slate-200">
                                                 <Image
@@ -149,7 +163,7 @@ export default function Projects() {
                                     </div>
                                 </Link>
                             ) : (
-                                <div className="relative overflow-hidden rounded-b-3xl bg-white shadow-sm transition-all duration-500 h-full flex flex-col">
+                                <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] backdrop-blur-2xl transition-all duration-500 h-full flex flex-col hover:bg-white/50 hover:border-white/80">
                                     <div className="relative w-full overflow-hidden bg-gray-100 shrink-0">
                                         <div className="relative aspect-[16/10] bg-[#f8f8f8]">
                                             <Image
@@ -177,7 +191,7 @@ export default function Projects() {
                                     </div>
                                 </div>
                             )}
-                            <div className="pointer-events-none absolute inset-0 rounded-b-3xl ring-1 ring-inset ring-black/[0.08]"></div>
+
                         </div>
                     ))}
                 </div>

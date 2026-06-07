@@ -1,0 +1,164 @@
+{
+  "header": {
+    "aboutMe": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "technologies": "Technologies",
+    "contact": "Contact",
+    "cv": "View CV"
+  },
+  "aboutMe": {
+    "title": "Full-stack web developer",
+    "heading": "React products with a strong UX eye.",
+    "description": "I build modern web applications with React, Next.js, TypeScript, Node.js, and practical testing. I care about clear user flows, reliable APIs, and interfaces people can understand quickly.",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume",
+    "scope": "Scope",
+    "aboutWork": "About My Work",
+    "aboutWorkDesc": "I develop full-stack web projects from responsive frontend screens to REST APIs and data models. My work spans product sites, learning tools, booking flows, and interactive apps.",
+    "scopeTags": ["Responsive UI", "REST APIs", "Data models"],
+    "process": "Process",
+    "myApproach": "My Approach",
+    "approachDesc": "UX thinking guides my implementation: I simplify flows, test important behavior with Vitest and Playwright, and troubleshoot details until the experience feels dependable.",
+    "processTags": ["Clear user flows", "Practical tests", "Reliable details"]
+  },
+  "coreSkills": {
+    "title": "Core Skills",
+    "subtitle": "A practical snapshot of the skills I use to build, test, and support modern web applications.",
+    "frontend": "Frontend",
+    "frontendDesc": "Building responsive, accessible interfaces with a strong eye for UX.",
+    "backend": "Backend & Data",
+    "backendDesc": "Designing APIs and working with both SQL and NoSQL data models.",
+    "testing": "Testing",
+    "testingDesc": "Checking real user flows and keeping projects reliable.",
+    "tools": "Tools",
+    "toolsDesc": "Working cleanly with code, planning, and debugging."
+  },
+  "projects": {
+    "title": "Selected Projects",
+    "subtitle": "A few projects that show how I combine product thinking, frontend craft, and full-stack delivery.",
+    "categories": ["All", "React", "Next.js", "Vanilla JS"],
+    "items": [
+      {
+        "name": "Perfect Cab",
+        "description": "Customer-facing cab service experience with booking-oriented pages and a real business presence.",
+        "stack": "React · TypeScript · PostgreSQL · UX/UI · UX Research · SEO"
+      },
+      {
+        "name": "Roadmap Academy",
+        "description": "Interactive learning roadmaps that turn UX/UI and web-development topics into clear next steps.",
+        "stack": "React · TypeScript · PostgreSQL"
+      },
+      {
+        "name": "PragmaBAT",
+        "description": "Renovation-company website presenting services, guarantees, and completed interior projects.",
+        "stack": "HTML · CSS · JavaScript"
+      },
+      {
+        "name": "Cocktail Explorer",
+        "description": "Recipe discovery app for exploring cocktails through a clear search and browsing experience.",
+        "stack": "Next.js · TypeScript"
+      },
+      {
+        "name": "Guess the Movie",
+        "description": "Interactive movie quiz that turns TMDB content into a quick visual guessing game.",
+        "stack": "Next.js · TypeScript"
+      },
+      {
+        "name": "Level Up!",
+        "description": "Interactive IT quiz application built as a Progressive Web App.",
+        "stack": "React · Tailwind CSS"
+      },
+      {
+        "name": "Paris Design Patrimoine",
+        "description": "A polished construction-company site shaped around services, trust, and easy client contact.",
+        "stack": "HTML · CSS · JavaScript"
+      },
+      {
+        "name": "Challenge Board",
+        "description": "Productivity suite application to manage challenges, tasks, and track personal progress.",
+        "stack": "React · TypeScript"
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Technologies & Tools",
+    "subtitle": "A curated selection of the tools and frameworks I use to bring ideas to life.",
+    "items": {
+      "js": "Core language for web development, used in all my projects. Experienced in ES6+, asynchronous programming, and DOM manipulation.",
+      "ts": "Type-safe JavaScript, ensuring code quality and scalability in complex applications. Proficient in interfaces, types, and generics.",
+      "react": "Building interactive UIs with a component-based architecture. Expert in hooks, context API, and performance optimization.",
+      "next": "Full-stack React framework optimized for performance and SEO. Experienced in SSR, ISR, and file-based routing.",
+      "vite": "Ultrafast build tool for modern web projects. Leverages native ES modules for lightning-fast HMR and development.",
+      "tailwind": "Utility-first CSS framework for rapid UI development. Skilled in responsive design and creating custom design systems.",
+      "node": "Server-side JavaScript environment. Building scalable network applications and RESTful backend architectures.",
+      "express": "Fast, unopinionated, minimalist web framework for Node.js. Used for building robust APIs and server-side logic.",
+      "mongo": "NoSQL document database. Proficient in schema design, aggregation pipelines, and data modeling for flexibility.",
+      "git": "Distributed version control system. Expert in branching strategies, merge conflict resolution, and collaborative workflows.",
+      "vercel": "Deployment and collaboration platform for frontend developers. Optimized for Next.js with instant deployments and scaling.",
+      "netlify": "All-in-one platform for automating modern web projects. Experienced in CI/CD, form handling, and serverless functions."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Open to web-development roles and product-minded projects. Reach out here or find me on:",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "View CV",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "success": "Thank you for your message! I will get back to you soon.",
+      "error": "There was an error sending your message. Please try again."
+    }
+  },
+  "cv": {
+    "back": "Back to Portfolio",
+    "download": "Download PDF",
+    "role": "Full-Stack Developer",
+    "location": "Paris, France",
+    "skills": {
+      "title": "Skills",
+      "frontend": "Frontend",
+      "backend": "Backend & Data",
+      "tooling": "Tooling & Methods"
+    },
+    "languages": {
+      "title": "Languages",
+      "french": "French",
+      "frenchLevel": "Fluent",
+      "english": "English",
+      "englishLevel": "B1",
+      "belarusian": "Belarusian",
+      "belarusianLevel": "Native"
+    },
+    "education": {
+      "title": "Education",
+      "expected": "Expected",
+      "ux": "Google Ateliers Numeriques",
+      "fullstack": "Le Reacteur Bootcamp",
+      "integrator": "CFAS Institut"
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Product-minded full-stack developer focused on responsive React and Next.js applications, TypeScript, Node.js APIs, SQL and NoSQL data, and UX-aware interfaces. Previous project management and support experience strengthens delivery, debugging, and communication across teams."
+    },
+    "devExp": {
+      "title": "Developer Experience",
+      "intern": "Full-Stack Developer Intern",
+      "freelance": "Web Integrator / Web Creation & Support",
+      "months": "months",
+      "years": "years combined"
+    },
+    "prevExp": {
+      "title": "Previous Relevant Experience",
+      "pm": "IT Project Manager",
+      "tech": "IT Support Technician",
+      "pm2": "Project Manager",
+      "intern": "Intern"
+    }
+  }
+}
