@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { BiGlobe } from "react-icons/bi";
+import { PiGlobeLight } from "react-icons/pi";
 import Nav from "./Nav";
 
 const Header = ({ lang, dict }: { lang: string, dict: any }) => {
@@ -51,7 +51,7 @@ const Header = ({ lang, dict }: { lang: string, dict: any }) => {
                             className="order-1 md:order-2 flex items-center justify-center text-gray-900 hover:opacity-70 transition-opacity"
                             title={lang === "en" ? "Passer en Français" : "Switch to English"}
                         >
-                            <BiGlobe size={28} />
+                            <PiGlobeLight size={28} />
                         </button>
                     </div>
                 </div>

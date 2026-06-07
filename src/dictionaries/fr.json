@@ -10,11 +10,11 @@
   "aboutMe": {
     "title": "Développeur web Full-Stack",
     "heading": "Des produits React avec une forte attention à l'UX.",
-    "description": "Je crée des applications web modernes avec React, Next.js, TypeScript, Node.js et des tests concrets. Je me soucie des parcours utilisateurs clairs, des API fiables et des interfaces faciles à comprendre.",
+    "description": "Je crée des applications web modernes avec React, Next.js, TypeScript, Node.js et des tests robustes. J'accorde une grande importance aux parcours utilisateurs clairs, aux API fiables et aux interfaces faciles à comprendre.",
     "projects": "Projets",
     "contact": "Contact",
     "resume": "CV",
-    "scope": "Portée",
+    "scope": "Périmètre",
     "aboutWork": "À propos de mon travail",
     "aboutWorkDesc": "Je développe des projets web full-stack, des interfaces frontend réactives aux API REST et modèles de données. Mon travail couvre les sites vitrines, les outils d'apprentissage, les flux de réservation et les applications interactives.",
     "scopeTags": ["UI Réactive", "API REST", "Modèles de données"],
@@ -27,13 +27,13 @@
     "title": "Compétences Clés",
     "subtitle": "Un aperçu pratique des compétences que j'utilise pour créer, tester et maintenir des applications web modernes.",
     "frontend": "Frontend",
-    "frontendDesc": "Création d'interfaces réactives et accessibles avec un fort attrait pour l'UX.",
+    "frontendDesc": "Création d'interfaces réactives et accessibles avec une forte orientation UX.",
     "backend": "Backend & Données",
     "backendDesc": "Conception d'API et gestion de modèles de données SQL et NoSQL.",
     "testing": "Tests",
     "testingDesc": "Vérification des parcours utilisateurs réels et maintien de la fiabilité des projets.",
     "tools": "Outils",
-    "toolsDesc": "Travail structuré avec le code, la planification et le débogage."
+    "toolsDesc": "Gestion du code, planification et débogage."
   },
   "projects": {
     "title": "Projets Sélectionnés",
@@ -91,7 +91,7 @@
       "react": "Création d'interfaces utilisateur interactives avec une architecture orientée composants. Expert en hooks, Context API et optimisation.",
       "next": "Framework React full-stack optimisé pour les performances et le SEO. Expérience en SSR, ISR et routage basé sur les fichiers.",
       "vite": "Outil de build ultra-rapide pour les projets web modernes. Utilise les modules ES natifs pour un HMR fulgurant.",
-      "tailwind": "Framework CSS utilitaire pour un développement UI rapide. Compétences en design responsive et création de systèmes de conception.",
+      "tailwind": "Framework CSS utilitaire pour un développement UI rapide. Compétences en design responsive et création de design systems.",
       "node": "Environnement JavaScript côté serveur. Création d'applications réseau scalables et d'architectures backend RESTful.",
       "express": "Framework web rapide, minimaliste et sans opinion pour Node.js. Utilisé pour créer des API robustes.",
       "mongo": "Base de données documentaire NoSQL. Maîtrise de la conception de schémas, pipelines d'agrégation et flexibilité des données.",
@@ -136,7 +136,7 @@
       "belarusianLevel": "Langue maternelle"
     },
     "education": {
-      "title": "Éducation",
+      "title": "Formation",
       "expected": "Prévu",
       "ux": "Google Ateliers Numériques",
       "fullstack": "Bootcamp Le Reacteur",
@@ -151,7 +151,7 @@
       "intern": "Développeur Full-Stack (Stage)",
       "freelance": "Intégrateur Web / Création & Support Web",
       "months": "mois",
-      "years": "ans combinés"
+      "years": "années cumulées"
     },
     "prevExp": {
       "title": "Expérience Précédente Pertinente",
