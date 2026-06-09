@@ -142,8 +142,8 @@ export default function Projects({ dict, lang }: { dict?: any, lang?: string }) 
                                                     fill
                                                     className="object-cover object-top transition-all duration-500"
                                                     sizes="(max-width: 768px) 100vw, 50vw"
-                                                    priority={index < 2}
-                                                    loading={index < 2 ? undefined : "lazy"}
+                                                    priority={index === 0}
+                                                    loading={index === 0 ? undefined : "lazy"}
                                                     quality={85}
                                                 />
                                             </div>
@@ -172,8 +172,8 @@ export default function Projects({ dict, lang }: { dict?: any, lang?: string }) 
                                                 fill
                                                 className="object-cover object-top transition-all duration-500"
                                                 sizes="(max-width: 768px) 100vw, 50vw"
-                                                priority={index < 2}
-                                                loading={index < 2 ? undefined : "lazy"}
+                                                priority={index === 0}
+                                                loading={index === 0 ? undefined : "lazy"}
                                                 quality={85}
                                             />
                                         </div>

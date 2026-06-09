@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { GeistMono } from "geist/font";
 import "../globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -8,7 +7,7 @@ import { getDictionary } from "../../dictionaries";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
   variable: "--font-inter",
   preload: true,
@@ -47,9 +46,7 @@ export default async function RootLayout({
   const { lang } = await params;
   const dict = getDictionary(lang);
   
-  const classNames = [inter.variable, GeistMono.variable, "antialiased"]
-    .filter(Boolean)
-    .join(" ");
+  const classNames = [inter.variable, inter.className, "antialiased"].join(" ");
 
   return (
     <html lang={lang}>
