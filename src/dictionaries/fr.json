@@ -79,6 +79,11 @@
         "name": "Challenge Board",
         "description": "Application de productivité pour gérer les défis, les tâches et suivre les progrès personnels.",
         "stack": "React · TypeScript"
+      },
+      {
+        "name": "Rock N Roll Fun",
+        "description": "Page de destination dynamique pour un groupe de rock en tournée, présentant les sorties musicales et les dates de concerts.",
+        "stack": "Next.js · TypeScript · Tailwind CSS"
       }
     ]
   },

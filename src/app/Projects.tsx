@@ -46,6 +46,11 @@ const getProjects = (dict: any) => {
             name: "Challenge Board",
             description: "Productivity suite application to manage challenges, tasks, and track personal progress.",
             stack: "React · TypeScript"
+        },
+        {
+            name: "Rock N Roll Fun",
+            description: "A dynamic landing page for a touring rock band, featuring music releases and concert dates.",
+            stack: "Next.js · TypeScript · Tailwind CSS"
         }
     ];
 
@@ -59,7 +64,8 @@ const getProjects = (dict: any) => {
             "/images/guess.webp",
             "/images/levelup.webp",
             "/images/patrimoine.webp",
-            "/images/challengeBoard.webp"
+            "/images/challengeBoard.webp",
+            "/images/fun-n-roll.webp"
         ][i],
         link: [
             "https://perfectcab.fr/fr/",
@@ -69,7 +75,8 @@ const getProjects = (dict: any) => {
             "https://tmdb-quiz.vercel.app/",
             "https://it-quiz-pwa.netlify.app/",
             "https://parisdesignpatrimoine.netlify.app/",
-            "https://challengebo.netlify.app/"
+            "https://challengebo.netlify.app/",
+            "https://fun-n-roll.netlify.app/"
         ][i]
     }));
 };
