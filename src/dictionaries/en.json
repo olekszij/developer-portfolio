@@ -41,6 +41,11 @@
     "categories": ["All", "React", "Next.js", "Vanilla JS"],
     "items": [
       {
+        "name": "MindShift FR",
+        "description": "French CBT learning path: lessons, breathing exercises, and a journal to work differently with emotions. Educational TCC product with a strong UX focus.",
+        "stack": "Next.js 16 · TypeScript · Tailwind · Zustand · Recharts · UX produit"
+      },
+      {
         "name": "Perfect Cab",
         "description": "Customer-facing cab service experience with booking-oriented pages and a real business presence.",
         "stack": "React · TypeScript · PostgreSQL · UX/UI · UX Research · SEO"

@@ -8,6 +8,11 @@ import { BiLinkExternal } from 'react-icons/bi';
 const getProjects = (dict: any) => {
     const items = dict?.items || [
         {
+            name: "MindShift FR",
+            description: "French CBT learning path: lessons, breathing exercises, and a journal to work differently with emotions. Educational TCC product with a strong UX focus.",
+            stack: "Next.js 16 · TypeScript · Tailwind · Zustand · Recharts · UX produit"
+        },
+        {
             name: "Perfect Cab",
             description: "Customer-facing cab service experience with booking-oriented pages and a real business presence.",
             stack: "React · TypeScript · PostgreSQL · UX/UI · UX Research · SEO"
@@ -57,6 +62,7 @@ const getProjects = (dict: any) => {
     return items.map((item: any, i: number) => ({
         ...item,
         image: [
+            "/images/mindshift.webp",
             "/images/perfect-cab.webp",
             "/images/roadmap-academy.webp",
             "/images/pragmabat-front.webp",
@@ -68,6 +74,7 @@ const getProjects = (dict: any) => {
             "/images/fun-n-roll.webp"
         ][i],
         link: [
+            "https://mindshift-roan.vercel.app/",
             "https://perfectcab.fr/fr/",
             "https://roadmapux.netlify.app/",
             "https://pragmabat.netlify.app/",

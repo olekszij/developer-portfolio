@@ -41,6 +41,11 @@
     "categories": ["Tout", "React", "Next.js", "Vanilla JS"],
     "items": [
       {
+        "name": "MindShift FR",
+        "description": "Parcours TCC en français : leçons, respiration et journal pour travailler autrement avec ses émotions. Application éducative TCC, UX produit.",
+        "stack": "Next.js 16 · TypeScript · Tailwind · Zustand · Recharts · UX produit"
+      },
+      {
         "name": "Perfect Cab",
         "description": "Expérience client pour un service de VTC axée sur la réservation en ligne et une présence professionnelle.",
         "stack": "React · TypeScript · PostgreSQL · UX/UI · Recherche UX · SEO"
